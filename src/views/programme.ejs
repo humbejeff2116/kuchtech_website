@@ -1,0 +1,50 @@
+
+
+
+
+
+
+
+
+
+<%- include('header') %> 
+<!-- <div class="container"> -->
+<div class="form-container">
+ 
+    <!-- content -->
+    <div class="form-content">
+        <h2 align="center"> SECTION B</h2>
+        <form action="/users/applied-program" method="POST" enctype="multipart/form-data" name="myform">
+               
+                <label for="course" ><b>Select Program Applying For</b></label><br >
+            
+            
+                    <select name="appliedprogram"> 
+                        <option value='' selected>--select--</option>
+                        <option value='public_health_nursing'>Public Health Nursing (PHN) </option>
+                        <option value='Environmental_health_technology'>Environmental Health Technology (EHT)</option>
+                        <option value='Environmental_health_technician'>Environmental Health Technicians(EVT) </option>
+                        <option value='Evironmental_health_assistant'>Environmental Health Assistant (EHA)</option>
+                        <option value='Health_education_and_promotion'>Health Education and Promotion (DHEP)</option>
+                        <option value='Health_information_management'>Health Information Management </option>
+                        <option value='Community_health_extension_worker'>Community Health Extension Worker (CHEW)</option>
+                        <option value='medical_lab_tech'>Medical Laboratory Technician (MLT) </option>
+                        <option value='Food_hyigene_and_dietetic'>Food Hygiene and Dietetic</option>
+                        <option value='Dental_health_technician'>Dental Health Technician (DHT) </option>
+                    </select><br ><br ><br >
+            
+                <label for="passport"><b>Upload Passport</b></label><br >
+                    <!-- <input type="file" name="passport" mutiple><br /><br /><br /> -->
+                    <button type="submit" class="btn btn-success"> Submit</button> 
+            </form>
+         
+            <!-- next button -->
+            <!-- <div class="next-button">
+                <a href="users/educational-qualification"> <button>back</button> </a>
+            </div> -->
+
+    </div>
+</div>
+
+</div>
+<%- include('_footer') %> 

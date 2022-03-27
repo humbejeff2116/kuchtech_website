@@ -1,0 +1,343 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>
+           Kumase College Of Health Technology
+        </title>
+       <!-- Latest compiled and minified CSS -->
+<!-- <link rel="stylesheet"  integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/css/about.css">
+<link rel="stylesheet" href="/index.css">
+<link rel="stylesheet" href="/contact.css">
+<link rel="stylesheet" href="/admission.css">
+<link rel="stylesheet" href="/entry-requirements.css">
+<link rel="stylesheet" href="/css/slideShowGallery.css">
+<link rel="stylesheet" href="/css/slideshow.css">
+<link rel="stylesheet" href="/css/departments.css">
+<link rel="icon" href="images/favicon.ico" >
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+crossorigin=""
+/>
+
+<link rel="stylesheet" href="/css/leaflet.css">
+
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+crossorigin="anonymous"
+></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        
+
+        <header  role="navigation">          
+             
+                    <div  class="logo">
+                        <a class="navbar-brand" href="/">
+                            <img src="/logo.png"  alt='logo'>
+                        </a>
+                    </div>  
+                    <nav class="nav-links">
+                            <% if (currentUser){ %>
+
+                                  <!-- nav 1 begins here -->
+                                <!-- home -->
+                                <div class="nav-1">
+                                    <div class="nav-item" >                               
+                                        <a class="<% title = 'login' ? 'active' : ''  %> " href="/">
+                                            <span>
+                                               Home
+                                            </span>
+                                        </a> 
+                                    </div>
+    
+                                    <!-- about-->
+                                    <div class="nav-item" >                               
+                                        <a class="<% title = 'login' ? 'active' : ''  %> " href="/about">
+                                            <span>
+                                               About
+                                            </span>
+                                        </a> 
+                                    </div>
+                                    <!-- Admissions -->
+    
+                                    <div class="nav-item" >                               
+                                        <a class="<% title = 'login' ? 'active' : ''  %> " href="/services">
+                                            <span>
+                                              Admissions
+                                            </span>
+                                        </a> 
+                                    </div>
+                                    <!-- departments -->
+                                    <div class="nav-item" >                               
+                                        <a class="<% title = 'login' ? 'active' : ''  %> " href="/services">
+                                            <span>
+                                              Departments
+                                            </span>
+                                        </a> 
+                                    </div>
+                                    <!-- contact -->
+    
+                                    <div class="nav-item" >                               
+                                        <a class="<% title = 'login' ? 'active' : ''  %> " href="/contact">
+                                            <span>
+                                               Contact
+                                            </span>
+                                        </a> 
+                                    </div>
+    
+                                    <!-- blog -->
+                                    <div class="nav-item" >                               
+                                        <a class="<% title = 'login' ? 'active' : ''  %> " href="/blog">
+                                            <span>
+                                             Blog
+                                            </span>
+                                        </a> 
+                                    </div>
+
+                                </div>
+
+
+                                <div class="nav-2">
+                                    <div  class="nav-item">                               
+                                        <a  href="/">
+                                            <span>
+                                         course Registration
+                                            </span>
+                                        </a> 
+                                    </div>
+                                    <div  class="nav-item">                               
+                                        <a  href="/users/">
+                                            <span>
+                                          Dashboard
+                                            </span>
+                                        </a> 
+                                    </div>
+
+                                <div  class="nav-item" >                               
+                                    <a class="<% title = 'members' ? 'active' : ''  %> " href="/users/edit" >
+                                        <span>
+                                            hello  <%= currentUser.displayName() %>
+                                        </span>
+                                    </a> 
+                                </div>
+
+
+                                <div  class="nav-item">                               
+                                    <a  href="/users/logout">
+                                        <span>
+                                        logout
+                                        </span>
+                                    </a> 
+                                </div>
+                            </div>
+                           
+                            <%}else{ %>
+                                <!-- nav 1 begins here -->
+                                <!-- home -->
+                                <div class="nav-1">
+                                    <div class="nav-item" >                               
+                                        <a class="<% title = 'login' ? 'active' : ''  %> " href="/">
+                                            <span>
+                                               HOME
+                                            </span>
+                                        </a> 
+                                    </div>
+    
+                                    <!-- about-->
+                                    <div class="nav-item" >                               
+                                        <a class="<% title = 'login' ? 'active' : ''  %> " href="/about">
+                                            <span>
+                                               ABOUT
+                                            </span>
+                                        </a> 
+                                    </div>
+                                    <!-- Admissions -->
+    
+                                    <div class="nav-item dropdown" > 
+                                        <!--  TODO... change admissions to dropdown to include
+                                            1) entry-requirements link
+                                            2) admissions link
+                                            3) e-application link
+                                          -->
+                                        <a class="<% title = 'login' ? 'active' : ''  %> " href='#' onclick="event.preventDefault()">
+                                            <span>
+                                              ADMISSION
+                                            </span>
+                                        </a> 
+                                        <div class="nav-item-dropdown">
+                                            <a class="<% title = 'login' ? 'active' : ''  %> " href="/entry-requirements">
+                                                <span>
+                                                  ENTRY REQUIREMENTS
+                                                </span>
+                                            </a> 
+                                            <a class="<% title = 'login' ? 'active' : ''  %> " href="/admissions">
+                                                <span>
+                                                  ADMISSION
+                                                </span>
+                                            </a> 
+                                            <a class="<% title = 'login' ? 'active' : ''  %> " href="/e-application">
+                                                <span>
+                                                 E-APPLICATION
+                                                </span>
+                                            </a> 
+
+                                        </div>
+                                    </div>
+
+                                    <!-- departments -->
+                                    <div class="nav-item" >                               
+                                        <a class="<% title = 'login' ? 'active' : ''  %> " href="/departments">
+                                            <span>
+                                              DEPARTMENTS
+                                            </span>
+                                        </a> 
+                                    </div>
+                                    <!-- contact -->
+    
+                                    <div class="nav-item" >                               
+                                        <a class="<% title = 'login' ? 'active' : ''  %> " href="/contact">
+                                            <span>
+                                               CONTACT
+                                            </span>
+                                        </a> 
+                                    </div>
+    
+                                    <!-- blog -->
+                                    <div class="nav-item" >                               
+                                        <a class="<% title = 'login' ? 'active' : ''  %> " href="/blog">
+                                            <span>
+                                             BLOG
+                                            </span>
+                                        </a> 
+                                    </div>
+
+                                </div>
+                                <!-- nav 2 begins here -->
+
+
+                                <div class="nav-2">
+                                    <!-- cousre registration -->
+                                    <div class="nav-item" >                               
+                                        <a class="<% title = 'registration' ? 'active' : ''  %> "  href="/students/portal">
+                                            <span>
+                                               STUDENT PORTAL
+                                            </span>
+                                        </a> 
+                                    </div>
+                                    <!-- login -->
+                                    <!-- <div class="nav-item" >                               
+                                        <a class="<% title = 'login' ? 'active' : ''  %> " href="/users/login">
+                                            <span>
+                                                Login
+                                            </span>
+                                        </a> 
+                                    </div> -->
+                                    <!-- signup -->
+    
+                                    <!-- <div class="nav-item" >                               
+                                        <a class="<% title = 'signup' ? 'active' : ''  %> " href="/users/signup">
+                                            <span>
+                                                Signup
+                                            </span>
+                                        </a> 
+                                    </div> -->
+
+                                </div>
+                                                   
+                            <% } %>                   
+                             
+
+                    </nav>           
+               
+        </header>
+        <!-- TODO... inclue side navigation here -->
+        <!-- <%- include('_sidenav') %> -->
+        <div class="progress"></div>
+        <div class="container">
+       
+
+        <div class="err-container" >
+         <%  if (errors.length > 0) { %>
+            <% errors.forEach(err =>{ %>
+                <div class="alert alert-danger" role ="alert">
+                    <%= err %>
+                </div>
+           <% }) %>
+
+
+
+         <%}%>
+              
+
+               <% if (valErrors.length>0) {%>
+
+                <% valErrors.forEach(err => { %>
+                    <div class="alert alert-danger" role ="alert">
+                            <%= err.msg %>
+                    </div>
+                    <%}) %>
+
+
+            <%}%>
+
+           
+              
+          
+           <% infos.forEach(info=>{ %>
+                <div id="info" class="alert alert-info" role="alert">
+                    <%= info %>
+                </div>
+                <script>
+                    // script to clear alert box after 8 seconds
+                    // alertInfo.className= alert-fadeout
+                    // then style alert fadeout
+                    window.onload = function(){
+                        let alertInfo = document.getElementById('info');
+                        if(alertInfo.textContent ){
+                            setTimeout(()=>{
+                                alertInfo.style.display = 'none';
+                            },8000);
+                        }
+                    }
+
+
+
+    //     const handleScroll = ( ) => {
+    //         let scrolled = false;
+          
+    //      const offset = window.scrollY;
+    //      if(offset>200){
+    //          scrolled = true;
+    //      } else{
+    //         scrolled = false;
+    //      }
+
+    //  }  
+    //    window.addEventListener('scroll', handleScroll); 
+    //    let header = document.getElementsByTagName('header')[0];
+      
+    //    if(scrolled){
+    //        header.attributes.className = 'navbar'
+    //    }     
+    
+    window.addEventListener('scroll',()=>{
+        document.body.style.setProperty('--scroll', window.pageYOffset/(document.body.offsetHeight-window.innerHeight))
+    },false);
+                </script>
+
+                
+          <%  }) %>
+        </div>
+      
+
+  

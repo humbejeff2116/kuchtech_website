@@ -1,0 +1,58 @@
+
+
+
+
+
+
+<%- include('partials/header') %>
+<!-- <div class="container"> -->
+
+
+<div  class="login-container">
+    
+
+<div class="login-panel">
+    <div class="login-panel-heading">
+        <h1>Login </h1>
+    </div>
+    <div class="login-panel-body">
+        <form action="/users/login" method="POST" name="login" >
+
+            <div class="login-form-group">
+                <span id="error-messg"></span>
+                <input name="username" type="email" id="email" minlength="8" class="form-control" placeholder="example@gmail.com" >
+            </div>
+        
+            <div class="login-form-group">
+                <input type="password" name="password" class="form-control" placeholder="password" ><br />
+            </div>
+            <div class="login-forgot-pass">
+                <p>forgot your password?</p>
+                
+          
+             </div> 
+                <button type="submit"  class="btn btn-primary " id="login-btn"  >Login</button>
+                <div class='signup-link'>
+                    <p >dont have an acount? <span><a href='/users/signup'>sign up</a></span> </p>
+
+                </div>
+               
+           
+        </form>
+
+    </div>
+
+    
+    <script type="text/javascript" src="/login.js" >
+</script>
+
+</div>
+</div>
+
+
+
+</div>
+
+
+
+<%- include('partials/_footer') %>  

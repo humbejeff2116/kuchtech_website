@@ -1,0 +1,139 @@
+
+
+
+
+
+
+
+
+
+
+<%- include('header') %> 
+<!-- <div class="container"> -->
+
+  <div class='form-container'>
+   
+      <!-- content -->
+      <div class="form-content">
+        <h2>PERSONAL INFORMATION  </h2>
+        <!-- <fieldset> -->
+        <form action="/users/registration-form" method="POST"  >    
+            <!--section for personal info starts here -->
+               
+                    <!-- select for title begins  -->
+                <label for="title"><b>Title</b></label><br >
+                    <select name="title">
+                         <option value="" selected>--select--</option>
+                         <option value="Mr">MR</option>
+                         <option value="Mrs">MRS</option>
+                         <option value="Master">MASTER</option>
+                         <option value="Miss">MISS</option>
+                    </select> <br/><br /><br /><br />
+
+                    <!-- marital status begins -->
+                <label for = "marital status" > <b> Marital Status</b> </label><br >
+                    <select name="maritalstatus">
+                        <option value="" selected>--select--</option>
+                        <option value="Married" >MARRIED</option>
+                        <option value="Divorced">DIVORCED</option>
+                        <option value="Single">SINGLE</option>
+                    </select><br/><br ><br >
+                   
+                    <!-- gender begins here -->
+                <label for="gender"><b> Gender</b></label><br >
+                    <select name="gender" >
+                        <option value="" selected>--select--</option>
+                        <option value="Male" >MALE</option>
+                        <option value="Female" >FEMALE</option>
+                    </select><br/><br><br />
+                
+                    <!-- scratch card no begins -->
+               <label for='scratch card'><b>Card No</b></label><br />
+                    <input type="text"  name="cardno" placeholder="ENTER SCRATCH CARD NUMBER"  /><br />
+                    <span></span><br /><br /><br /><br /><!--span is used  for error reporting-->
+                
+                <label for="email"><b>Email Address </b></label><br >
+                    <input type="email" name="regemail"  placeholder="EXAMPLE@GMAIL.COM" /><br />
+                    <span></span><br /><br /><br /><br /><!--span is used  for error reporting-->
+                   
+                <label for="surname"><b>Surname</b></label><br >
+                    <input type="text" name="surname" placeholder="ENTER SURNAME"  /><br />
+                    <span></span><br/><br /><br /><br /><!--span is used  for error reporting-->
+                  
+                <label for="First name"><b>First Name</b></label><br >
+                    <input type="text" name="firstname" placeholder=" ENTER FIRST NAME" /><br />
+                    <span></span><br/><br /><br /><br /><!--span is used  for error reporting-->
+                   
+            
+                    <!-- last name begins here -->
+                <label for="last name"><b>Last Name</b></label><br >
+                    <input type="text" name="lastname" placeholder="ENTER LAST NAME" /><br />
+                    <span></span><br/><br /><br /><br /><!--span is used  for error reporting-->
+                    <!-- last name ends here -->
+            
+                <label for="nationality"><b>Nationality</b></label><br >
+                    <input type="text" name="nationality" placeholder="ENTER YOUR NATIONALITY" /><br />
+                    <span></span><br ><br /><br /><br /> <!--span is used  for error reporting-->
+            
+                <label for="religion"><b>Religion</b></label><br >
+                    <input type="text" name="religion" placeholder="ENTER YOUR RELIGION" /><br />
+                    <span></span><br /><br /><br /><!--span is used  for error reporting-->
+                       
+                <label for="date of birth"><b>Date Of Birth</b></label><br/>
+                    <input type="date" id="dateofbirth" name="dateofbirth"><br />
+                    <span></span><br /><br /><br /><!--span is used  for error reporting-->
+                        
+                <label for="state"><b> State Of Origin</b></label><br >
+                    <select name="stateoforigin" >
+                        <option value='' selected>-- select --</option>
+                        <option value="ABIA" >ABIA</option>
+                        <option value="ADAMAWA" >ADAMAWA</option>
+                        <option value="AKWA_IBOM">AKWA IBOM</option>
+                        <option value="ANAMBRA">ANAMBRA</option>
+                        <option value="BAUCHI">BAUCHI</option>
+                        <option value="BAYELSA">BAYELSA</option>
+                        <option value="BENUE">BENUE</option>
+                        <option value="BORNO">BORNO</option>
+                        <option value="CROSS_RIVER">CROSS RIVER</option>
+                        <option value="DELTA">DELTA</option>
+                        <option value="EBONYI">EBONYI</option>
+                        <option value="EDO">EDO</option>
+                        <option value="EKITI">EKITI</option>
+                        <option value="ENUGU">ENUGU</option>
+                        <option value="GOMBE">GOMBE</option>
+                        <option value="IMO">IMO</option>
+                        <option value="JIGAWA">JIGAWA</option>
+                        <option value="KADUNA">KADUNA</option>
+                        <option value="KANO">KANO</option>
+                        <option value="KATSINA">KATSINA</option>
+                        <option value="KEBBI">KEBBI</option>
+                        <option value="KOGI">KOGI</option>
+                        <option value="KWARA">KWARA</option>
+                        <option value="LAGOS">LAGOS</option>
+                        <option value="NASARAWA">NASARAWA</option>
+                        <option value="NIGER">NIGER</option>
+                        <option value="OGUN">OGUN</option>
+                        <option value="ONDO">ONDO</option>
+                        <option value="OSUN">OSUN</option>
+                        <option value="OYO">OYO</option>
+                        <option value="PLATEAU">PLATEAU</option>
+                        <option value="RIVERS">RIVERS</option>
+                        <option value="SOKOTO">SOKOTO</option>
+                        <option value="TARABA">TARABA</option>
+                        <option value="YOBE">YOBE</option>
+                        <option value="ZAMFARA">ZAMFARA</option>
+                    </select><br /><br/><br /><br /><br />
+
+           
+                <button type="submit" class="btn btn-success"> Submit</button> 
+          
+        </form>
+      <!-- </fieldset> -->
+      </div> 
+</div>
+<!-- <script type="text/javascript" src="javascript/validate.js"></script>  -->
+
+</div>
+
+
+<%- include('_footer') %> 

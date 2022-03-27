@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>test</title>
+        <meta charset="utf-8" />
+    </head>
+    <style>
+
+ .Testimonial {
+  margin-left: 16.375rem;
+  margin-top: 2.5rem;
+  max-width: 29.5rem;
+  align-items: flex-end;
+display: flex;
+}
+.Testimonial-image {
+  border-radius: 50%;
+  display: block;
+  flex-shrink: 0;
+  margin-right: 1.8125rem;
+  max-width: 25%;
+  opacity: 0;
+  overflow: hidden;
+  position: relative;
+  transform: scale(0);
+  transition: opacity .5s cubic-bezier(.5,0,.5,1),transform .5s cubic-bezier(.5,0,.5,1);
+    transition-delay: 0s, 0s;
+  width: 5.75rem;
+}
+.Testimonial-bubble {
+    /* opacity: 1; */
+    /* transform: translateX(0); */
+
+    background-color: #f9cd34;
+    border-radius: 4px 4px 4px 0;
+    margin-bottom: .5625rem;
+    /* opacity: 0; */
+    padding: 1rem;
+    position: relative;
+    transform: translateX(-30px);
+    transition: opacity .5s cubic-bezier(.5,0,.5,1) .35s,transform .5s cubic-bezier(.5,0,.5,1) .35s;
+    transition-delay: 0.35s, 0.35s;
+
+
+
+ 
+}
+
+
+/* .Testimonial-bubble::after {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg fill='%23f9cd34' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 17'%3E%3Cpath d='M10 0c0 1.07-.43 2.08-1.2 2.83l-7.6 7.4A3.94 3.94 0 0 0 3.95 17H10V0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  bottom: 0;
+  content: "";
+  height: 1.0625rem;
+  position: absolute;
+  right: 100%;
+  width: .625rem;
+} */
+
+.Testimonial-bubble::after {
+	bottom: 100%;
+	left: 89%;
+	border: solid transparent;
+	content: " ";
+	height: 1rem;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-bottom-color: #f9cd34;
+	border-width: 8px;
+	margin-left: -8px;
+}
+.Testimonial-quote {
+  font-size: 1.1875rem;
+  line-height: 1.4;
+}
+.Testimonial-cite {
+  display: inline-block;
+  font-size: .75rem;
+  line-height: 1.5;
+  margin-top: .5rem;
+}
+    </style>
+
+    <body>
+
+        <div class="Testimonial" data-sal="" data-sal-once="">
+            <div class="Testimonial-image">
+                <img src="/assets/images/julia-angwin.jpg" srcset="/assets/images/julia-angwin.jpg, /assets/images/julia-angwin-2x.jpg 2x" alt="">
+            </div>
+            <figure class="Testimonial-bubble">
+              <blockquote class="Testimonial-quote">
+                “Mozilla Rally is a revelatory tool that seeks to fix the information imbalance created by tech platforms at the public’s expense.”
+              </blockquote>
+              <figcaption class="Testimonial-caption">
+                  <cite class="Testimonial-cite">
+                    <strong class="Testimonial-cite-name">
+                      Julia Angwin, 
+                    </strong>
+                    <span class="Testimonial-cite-title">
+                        Editor-in-Chief and Founder of The&nbsp;Markup
+                      </span>
+                  </cite>
+                </figcaption>
+            </figure>
+          </div>
+
+
+          
+        <div class="root">
+
+        </div>
+
+
+       
+
+
+    </body>
+
+    <script>
+        const data = [
+            {
+                name: "jeffrey",
+                age: 26,
+                sex: 'male'
+            },
+            {
+                name: "terdoo",
+                age: 26,
+                sex: 'male'
+            },
+            {
+                name: "torkuma",
+                age: 26,
+                sex: 'male'
+            },
+            
+        ]
+
+        window.addEventListener('load', function(e) {
+            let rootNode = document.querySelector('.root');
+            data.map(user => {
+                const { name, age, sex } = user;
+                const template = ` 
+                    <div class="index-course">
+
+                    <div class="index-course-title">
+                        <h3>
+                            ${ name }
+                        </h3>
+
+                    </div>
+
+                    <div class="index-course-department">
+                        <i>tag</i>:<span> ${ age } </span>
+                    </div>
+
+                    <div class="index-course-details">
+                    <p>
+                        ${ sex }
+                    </p>
+                    </div>
+
+                    <div class="index-course-button-container">
+                        <div class="index-course-button-wrapper">
+                            <button>view more details</button>
+                        </div>
+                    </div>
+
+                    </div> `
+                    rootNode.innerHTML += template;   
+            })
+        })
+
+    </script>
+</html>

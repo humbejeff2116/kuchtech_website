@@ -1,0 +1,41 @@
+
+
+
+.admission-container{
+    /* border: 1px solid red; */
+    padding: 1%;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    min-height: 88vh;
+
+}
+.admission-wrapper{
+    border:1px solid var(--prim-border-color);
+    /* box-shadow: 1px 1px 2px #6d6d6d; */
+    width: 70%;
+    padding: 3%;
+    border-radius: 4px;
+
+}
+.admission-heading{
+    color: var(--text-color);
+
+}
+
+.admission-writeup{
+    color: var(--text-color);
+
+}
+.admission-writeup p{
+    font-size: 1.25rem;
+    text-align: justify;
+}
+
+.admission-writeup p a{
+   color: var(--prim-color);
+   text-decoration: none;
+}
+.admission-writeup p a:hover{
+   text-decoration: underline;
+}

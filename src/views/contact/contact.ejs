@@ -1,0 +1,119 @@
+
+
+
+
+
+
+
+
+
+
+<%- include('../partials/header') %> 
+
+
+<div class="contact-container">
+    <div class="contact-heading">
+        <h2>Contact us</h2>
+    </div>
+
+    <div class="contact-children-wrapper">
+        <div class="contact-address-container">
+            <!-- <div class="contact-address-writeup">
+
+                <h2>
+                    You feel like reaching out to us? 
+                    We are always available at the following addresses
+                </h2>
+                <p>Beside Jolua hospital wadata, makurdi, Benue state.</p>
+                <p>+456-43545-4545-78</p>
+                <p>kuch@gmail.com</p>
+    
+              </div> -->
+             
+                <div id="map"></div>
+              
+        </div>
+
+        <!-- <div class="contact-or-container">
+            <div>OR</div>
+        </div> -->
+    
+        <div class="contact-form-container">
+            <!-- <h4>Send us a message if you have one</h4> -->
+    
+            <form  autoComplete="off" >
+                <div class="contact-form-group">
+                    <label>
+                    <input type="text" name="name" />
+                    <span class="placeholder">Name</span>
+                    </label>
+                </div>
+                <div class="contact-form-group">
+                    <label>
+                    <input type="text"  class="form-control" name="email" />
+                    <span class="placeholder">Email</span>
+                    </label>
+                </div>
+                <div class="contact-form-group">
+                    <label>
+                    <input type="text"  class="form-control" name="subject" />
+                    <span class="placeholder"> Subject  </span>
+                    </label>
+                </div>
+                <div class="contact-form-group">
+                    <label>
+                    <textarea name="message" ></textarea>
+                    <span class="placeholder">Message</span>
+                    </label>
+                </div>
+                <div class="contact-form-bttn-contr">
+                    <div class="contact-form-bttn-wrapper">
+                        <button type="submit" class="btn btn-success">
+                            Send
+                            </button>
+
+                    </div>
+                    
+                </div>
+            </form>
+    
+        </div>
+
+    </div>
+
+   
+
+</div>
+
+
+
+
+
+
+
+
+
+</div> 
+<script>
+    const inputs = document.querySelectorAll('input');
+
+    inputs.forEach(inp => {
+
+        inp.addEventListener('blur', function(e) {
+            if (e.target.value.length > 0 ) {
+                return e.target.classList.add('not-empty')
+            } else {
+                return  e.target.classList.remove('not-empty')
+            }
+        })
+    })
+      
+
+</script>
+
+<script  src="js/map.js"> </script>
+<!-- <script type="module" src="js/bundle.js"> </script> -->
+
+<%- include('../partials/_footer') %>
+
+

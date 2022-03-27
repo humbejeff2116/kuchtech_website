@@ -1,0 +1,172 @@
+<%- include('header') %> 
+
+<div class='form-container'>
+   
+    <!-- content -->
+    <div class="form-content">
+      <h2>Course Registration </h2>
+      <!-- <fieldset> -->
+      <form action="/users/course-registration" method="POST" enctype="multipart/form-data"  >    
+          <!--section for personal info starts here -->
+             
+                  <!-- select for title begins  -->
+              <label for="title"><b>Title</b></label><br >
+                  <select name="title">
+                       <option value="" selected>--select--</option>
+                       <option value="Mr">MR</option>
+                       <option value="Mrs">MRS</option>
+                       <option value="Master">MASTER</option>
+                       <option value="Miss">MISS</option>
+                  </select> <br/><br /><br /><br />
+
+                  <!-- marital status begins -->
+              <label for = "marital status" > <b> Marital Status</b> </label><br >
+                  <select name="maritalstatus">
+                      <option value="" selected>--select--</option>
+                      <option value="Married" >MARRIED</option>
+                      <option value="Divorced">DIVORCED</option>
+                      <option value="Single">SINGLE</option>
+                  </select><br/><br ><br >
+                 
+                  <!-- gender begins here -->
+              <label for="gender"><b> Gender</b></label><br >
+                  <select name="gender" >
+                      <option value="" selected>--select--</option>
+                      <option value="Male" >MALE</option>
+                      <option value="Female" >FEMALE</option>
+                  </select><br/><br><br />
+              
+              
+              <label for="email"><b>Email Address </b></label><br >
+                  <input type="email" name="email"  placeholder="EXAMPLE@GMAIL.COM" /><br />
+                  <span></span><br /><br /><br /><br /><!--span is used  for error reporting-->
+                 
+              <label for="surname"><b>Surname</b></label><br >
+                  <input type="text" name="surname" placeholder="ENTER SURNAME"  /><br />
+                  <span></span><br/><br /><br /><br /><!--span is used  for error reporting-->
+                
+              <label for="First name"><b>First Name</b></label><br >
+                  <input type="text" name="firstname" placeholder=" ENTER FIRST NAME" /><br />
+                  <span></span><br/><br /><br /><br /><!--span is used  for error reporting-->
+                 
+          
+                  <!-- last name begins here -->
+              <label for="last name"><b>Last Name</b></label><br >
+                  <input type="text" name="lastname" placeholder="ENTER LAST NAME" /><br />
+                  <span></span><br/><br /><br /><br /><!--span is used  for error reporting-->
+                  <!-- last name ends here -->
+          
+              <label for="nationality"><b>Nationality</b></label><br >
+                  <input type="text" name="nationality" placeholder="ENTER YOUR NATIONALITY" /><br />
+                  <span></span><br ><br /><br /><br /> <!--span is used  for error reporting-->
+          
+              <!-- <label for="religion"><b>Religion</b></label><br >
+                  <input type="text" name="religion" placeholder="ENTER YOUR RELIGION" /><br />
+                  <span></span><br /><br /><br /> -->
+                     
+              <label for="date of birth"><b>Date Of Birth</b></label><br/>
+                  <input type="date" id="dateofbirth" name="dateofbirth"><br />
+                  <span></span><br /><br /><br /><!--span is used  for error reporting-->
+                      
+              <label for="state"><b> State Of Origin</b></label><br >
+                  <select name="stateoforigin" >
+                      <option value='' selected>-- select --</option>
+                      <option value="Abia" >ABIA</option>
+                      <option value="Adamawa" >ADAMAWA</option>
+                      <option value="Akwa Ibom">AKWA IBOM</option>
+                      <option value="Anambra">ANAMBRA</option>
+                      <option value="Bauchi">BAUCHI</option>
+                      <option value="Bayelsa">BAYELSA</option>
+                      <option value="Benue">BENUE</option>
+                      <option value="Borno">BORNO</option>
+                      <option value="Cross River">CROSS RIVER</option>
+                      <option value="Delta">DELTA</option>
+                      <option value="Ebonyi">EBONYI</option>
+                      <option value="Edo">EDO</option>
+                      <option value="Ekiti">EKITI</option>
+                      <option value="Enugu">ENUGU</option>
+                      <option value="Gombe">GOMBE</option>
+                      <option value="Imo">IMO</option>
+                      <option value="Jigawa">JIGAWA</option>
+                      <option value="Kaduna">KADUNA</option>
+                      <option value="Kano">KANO</option>
+                      <option value="Katsina">KATSINA</option>
+                      <option value="Kebbi">KEBBI</option>
+                      <option value="Kogi">KOGI</option>
+                      <option value="Kwara">KWARA</option>
+                      <option value="Lagos">LAGOS</option>
+                      <option value="Nasarawa">NASARAWA</option>
+                      <option value="Niger">NIGER</option>
+                      <option value="OGUN">OGUN</option>
+                      <option value="Ondo">ONDO</option>
+                      <option value="Osun">OSUN</option>
+                      <option value="Oyo">OYO</option>
+                      <option value="Plateau">PLATEAU</option>
+                      <option value="Rivers">RIVERS</option>
+                      <option value="Sokoto">SOKOTO</option>
+                      <option value="Taraba">TARABA</option>
+                      <option value="Yobe">YOBE</option>
+                      <option value="Zamfara">ZAMFARA</option>
+                  </select><br /><br/><br /><br /><br />
+
+
+                  
+                  <!-- scratch card no begins -->
+             <label for='scratch card'><b>Registration Number</b></label><br />
+             <input type="text"  name="regnumber" placeholder="ENTER REG NUMBER"  /><br />
+             <span></span><br />
+
+             <label for='scratch card'><b>Level</b></label><br />
+             <input type="text"  name="level" placeholder="ENTER YOUR LEVEL" />
+             <span></span><br />
+
+                  <label for="course" ><b>Department</b></label><br >                    
+                  <select name="department"> 
+                      <option value='' selected>--select--</option>
+                      <option value='Public Health Nursing'>Public Health Department </option>
+                      <option value='Environmental health department'>Environmental Health Department </option>
+                      <option value='Health Education and Promotion Department'>Health Education and Promotion Department</option>
+                      <option value='Health Information Management Department'>Health Information Management Department </option>
+                      <option value='Community Health Department'>Community Health Department</option>
+                      <option value='Medical Laboratory Science Department'>Medical Laboratory Science Department</option>
+                      <option value='Food Hygiene and Dietetic Department '>Food Hygiene and Dietetic Department</option>
+                      <option value='Dental Health Department'>Dental Health Department</option>
+                  </select><br ><br ><br >
+
+                  
+<label for="course"><b>Slect Courses Offering</b></label>
+
+<div class="courses">
+    <option >Public Health Nursing (PHN)<input type="checkbox" name="phn" value="yes" checked="checked"/> </option>
+    <option>Environmental Health Technology (EHT)<input type="checkbox" name="eht" value="yes" /></option>
+    <option>Environmental Health Technicians(EVT)<input type="checkbox" name="evt" value="yes" /> </option>
+    <option>Environmental Health Assistant (EHA)<input type="checkbox" name="eha" value="yes" /></option>
+    <option>Health Education and Promotion (DHEP)<input type="checkbox" name="dhep" value="yes" /></option>
+    <option>Health Information Management<input type="checkbox" name="" value="yes" /> </option>
+    <option>Community Health Extension Worker (CHEW)<input type="checkbox" name="chew" value="yes" /></option>
+    <option>Medical Laboratory Technician (MLT)<input type="checkbox" name="mlt" value="yes" />  </option>
+    <option>Food Hygiene and Dietetic<input type="checkbox" name="" value="yes" /></option>
+    <option>Dental Health Technician (DHT)<input type="checkbox" name="dht" value="yes" /> </option>
+
+
+</div>
+    
+
+
+                <label for="passport"><b>Upload Passport</b></label>
+                <input type="file" name="image" mutiple><br /><br /><br />
+
+
+
+         
+              <button type="submit" class="btn btn-success"> Submit</button> 
+        
+      </form>
+    <!-- </fieldset> -->
+    </div> 
+</div>
+<!-- <script type="text/javascript" src="javascript/validate.js"></script>  -->
+
+</div>
+
+<%- include('_footer') %> 

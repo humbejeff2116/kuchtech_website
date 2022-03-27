@@ -1,0 +1,934 @@
+
+
+
+
+
+
+
+
+
+
+
+
+<%- include('header') %> 
+<!-- <div class="container"> -->
+<div class="form-container">
+   
+    <!-- content -->
+    <div class="form-content">
+        <h2>SECTION A</h2> 
+      
+        <form action="/users/educational-qualification" method="POST"  name="myform">
+
+           
+            <h2 align="center"><b>EDUCATIONAL QUALIFICATION</b></h2>
+            <h3  align="center"><b>PRIMARY SCHOOL DETAILS</b></h3>
+            <label><b>From</b></label>
+            <select name="primfrom">
+                <option value="" selected>--select--</option>
+                <option value="1960">1960</option>
+                <option value="1961">1961</option>
+                <option value="1962">1962</option>
+                <option value="1963">1963</option>
+                <option value="1964">1964</option>
+                <option value="1965">1965</option>
+                <option value="1966">1966</option>
+                <option value="1967">1967</option>
+                <option value="1968">1968</option>
+                <option value="1969">1969</option>
+                <option value="1970">1970</option>
+            
+                <option value="1971">1971</option>
+                <option value="1972">1972</option>
+                <option value="1973">1973</option>
+                <option value="1974">1974</option>
+                <option value="1975">1975</option>
+                <option value="1976">1976</option>
+                <option value="1977">1977</option>
+                <option value="1978">1978</option>
+                <option value="1979">1979</option>
+                <option value="1980">1980</option>
+            
+                <option value="1981">1981</option>
+                <option value="1982">1982</option>
+                <option value="1983">1983</option>
+                <option value="1984">1984</option>
+                <option value="1985">1985</option>
+                <option value="1986">1986</option>
+                <option value="1987">1987</option>
+                <option value="1988">1988</option>
+                <option value="1989">1989</option>
+                <option value="1990">1990</option>
+                
+                <option value="1991">1991</option>
+                <option value="1992">1992</option>
+                <option value="1993">1993</option>
+                <option value="1994">1994</option>
+                <option value="1995">1995</option>
+                <option value="1996">1996</option>
+                <option value="1997">1997</option>
+                <option value="1998">1998</option>
+                <option value="1999">1999</option>
+                <option value="2000">2000</option>
+            
+                <option value="2001">2001</option>
+                <option value="2002">2002</option>
+                <option value="2003">2003</option>
+                <option value="2004">2004</option>
+                <option value="2005">2005</option>
+                <option value="2006">2006</option>
+                <option value="2007">2007</option>
+                <option value="2008">2008</option>
+                <option value="2009">2009</option>
+                <option value="2010">2010</option>
+            
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+               </select>
+            
+                <label><b>To</b></label>
+             <select name="primto">
+                <option value="" selected>--select--</option>
+                <option value="1960">1960</option>
+                <option value="1961">1961</option>
+                <option value="1962">1962</option>
+                <option value="1963">1963</option>
+                <option value="1964">1964</option>
+                <option value="1965">1965</option>
+                <option value="1966">1966</option>
+                <option value="1967">1967</option>
+                <option value="1968">1968</option>
+                <option value="1969">1969</option>
+                <option value="1970">1970</option>
+            
+                <option value="1971">1971</option>
+                <option value="1972">1972</option>
+                <option value="1973">1973</option>
+                <option value="1974">1974</option>
+                <option value="1975">1975</option>
+                <option value="1976">1976</option>
+                <option value="1977">1977</option>
+                <option value="1978">1978</option>
+                <option value="1979">1979</option>
+                <option value="1980">1980</option>
+            
+                <option value="1981">1981</option>
+                <option value="1982">1982</option>
+                <option value="1983">1983</option>
+                <option value="1984">1984</option>
+                <option value="1985">1985</option>
+                <option value="1986">1986</option>
+                <option value="1987">1987</option>
+                <option value="1988">1988</option>
+                <option value="1989">1989</option>
+                <option value="1990">1990</option>
+                
+                <option value="1991">1991</option>
+                <option value="1992">1992</option>
+                <option value="1993">1993</option>
+                <option value="1994">1994</option>
+                <option value="1995">1995</option>
+                <option value="1996">1996</option>
+                <option value="1997">1997</option>
+                <option value="1998">1998</option>
+                <option value="1999">1999</option>
+                <option value="2000">2000</option>
+            
+                <option value="2001">2001</option>
+                <option value="2002">2002</option>
+                <option value="2003">2003</option>
+                <option value="2004">2004</option>
+                <option value="2005">2005</option>
+                <option value="2006">2006</option>
+                <option value="2007">2007</option>
+                <option value="2008">2008</option>
+                <option value="2009">2009</option>
+                <option value="2010">2010</option>
+            
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+            </select>
+            <label><b>Certificate Obtained</b></label> 
+            <select name="primcertobtained">
+                <option value="" selected>--select--</option>
+                <option value="PSLC">PSLC</option>
+            </select><br /><br />
+            <label><b>School</b></label>
+            <input type="text" name="primschoolname" placeholder="PRIMARY SCHOOL NAME" required><br />
+            
+            
+            <h3  align="center" style="font-weight:bold ;">SECONDARY SCHOOL DETAILS</h3>
+            <label><b>From</b></label>
+            <select name="secfrom">
+                <option value="" selected>--select--</option>
+                <option value="1960">1960</option>
+                <option value="1961">1961</option>
+                <option value="1962">1962</option>
+                <option value="1963">1963</option>
+                <option value="1964">1964</option>
+                <option value="1965">1965</option>
+                <option value="1966">1966</option>
+                <option value="1967">1967</option>
+                <option value="1968">1968</option>
+                <option value="1969">1969</option>
+                <option value="1970">1970</option>
+            
+                <option value="1971">1971</option>
+                <option value="1972">1972</option>
+                <option value="1973">1973</option>
+                <option value="1974">1974</option>
+                <option value="1975">1975</option>
+                <option value="1976">1976</option>
+                <option value="1977">1977</option>
+                <option value="1978">1978</option>
+                <option value="1979">1979</option>
+                <option value="1980">1980</option>
+            
+                <option value="1981">1981</option>
+                <option value="1982">1982</option>
+                <option value="1983">1983</option>
+                <option value="1984">1984</option>
+                <option value="1985">1985</option>
+                <option value="1986">1986</option>
+                <option value="1987">1987</option>
+                <option value="1988">1988</option>
+                <option value="1989">1989</option>
+                <option value="1990">1990</option>
+                
+                <option value="1991">1991</option>
+                <option value="1992">1992</option>
+                <option value="1993">1993</option>
+                <option value="1994">1994</option>
+                <option value="1995">1995</option>
+                <option value="1996">1996</option>
+                <option value="1997">1997</option>
+                <option value="1998">1998</option>
+                <option value="1999">1999</option>
+                <option value="2000">2000</option>
+            
+                <option value="2001">2001</option>
+                <option value="2002">2002</option>
+                <option value="2003">2003</option>
+                <option value="2004">2004</option>
+                <option value="2005">2005</option>
+                <option value="2006">2006</option>
+                <option value="2007">2007</option>
+                <option value="2008">2008</option>
+                <option value="2009">2009</option>
+                <option value="2010">2010</option>
+            
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+            </select>  
+            
+                <label><b>To</b></label>
+            <select name="secto">
+                <option value="" selected>--select--</option>
+                <option value="1960">1960</option>
+                <option value="1961">1961</option>
+                <option value="1962">1962</option>
+                <option value="1963">1963</option>
+                <option value="1964">1964</option>
+                <option value="1965">1965</option>
+                <option value="1966">1966</option>
+                <option value="1967">1967</option>
+                <option value="1968">1968</option>
+                <option value="1969">1969</option>
+                <option value="1970">1970</option>
+            
+                <option value="1971">1971</option>
+                <option value="1972">1972</option>
+                <option value="1973">1973</option>
+                <option value="1974">1974</option>
+                <option value="1975">1975</option>
+                <option value="1976">1976</option>
+                <option value="1977">1977</option>
+                <option value="1978">1978</option>
+                <option value="1979">1979</option>
+                <option value="1980">1980</option>
+            
+                <option value="1981">1981</option>
+                <option value="1982">1982</option>
+                <option value="1983">1983</option>
+                <option value="1984">1984</option>
+                <option value="1985">1985</option>
+                <option value="1986">1986</option>
+                <option value="1987">1987</option>
+                <option value="1988">1988</option>
+                <option value="1989">1989</option>
+                <option value="1990">1990</option>
+                
+                <option value="1991">1991</option>
+                <option value="1992">1992</option>
+                <option value="1993">1993</option>
+                <option value="1994">1994</option>
+                <option value="1995">1995</option>
+                <option value="1996">1996</option>
+                <option value="1997">1997</option>
+                <option value="1998">1998</option>
+                <option value="1999">1999</option>
+                <option value="2000">2000</option>
+            
+                <option value="2001">2001</option>
+                <option value="2002">2002</option>
+                <option value="2003">2003</option>
+                <option value="2004">2004</option>
+                <option value="2005">2005</option>
+                <option value="2006">2006</option>
+                <option value="2007">2007</option>
+                <option value="2008">2008</option>
+                <option value="2009">2009</option>
+                <option value="2010">2010</option>
+            
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+            </select><br />
+            
+            
+            <label><b>Certificate Obtained </b></label>
+            <select name="seccertobtained">
+                <option value="" selected>--select--</option>
+                <option value="SSCE">SSCE</option>
+                <option value="WASSCE">WASSCE</option>
+                <option value="NECO">NECO</option>
+                <option value="GCE">GCE</option>
+              
+            </select>
+            <label><b>School</b></label>
+            <input type="text" name="secschoolname" placeholder="SECONDARY SCHOOL NAME"/><br />
+            
+            
+            <!-- <p><b>OTHERS</b></p>
+            <label><b>from:</b></label>
+            <select>
+                <option value="" selected>--select--</option>
+                <option value="1960">1960</option>
+                <option value="1961">1961</option>
+                <option value="1962">1962</option>
+                <option value="1963">1963</option>
+                <option value="1964">1964</option>
+                <option value="1965">1965</option>
+                <option value="1966">1966</option>
+                <option value="1967">1967</option>
+                <option value="1968">1968</option>
+                <option value="1969">1969</option>
+                <option value="1970">1970</option>
+            
+                <option value="1971">1971</option>
+                <option value="1972">1972</option>
+                <option value="1973">1973</option>
+                <option value="1974">1974</option>
+                <option value="1975">1975</option>
+                <option value="1976">1976</option>
+                <option value="1977">1977</option>
+                <option value="1978">1978</option>
+                <option value="1979">1979</option>
+                <option value="1980">1980</option>
+            
+                <option value="1981">1981</option>
+                <option value="1982">1982</option>
+                <option value="1983">1983</option>
+                <option value="1984">1984</option>
+                <option value="1985">1985</option>
+                <option value="1986">1986</option>
+                <option value="1987">1987</option>
+                <option value="1988">1988</option>
+                <option value="1989">1989</option>
+                <option value="1990">1990</option>
+                
+                <option value="1991">1991</option>
+                <option value="1992">1992</option>
+                <option value="1993">1993</option>
+                <option value="1994">1994</option>
+                <option value="1995">1995</option>
+                <option value="1996">1996</option>
+                <option value="1997">1997</option>
+                <option value="1998">1998</option>
+                <option value="1999">1999</option>
+                <option value="2000">2000</option>
+            
+                <option value="2001">2001</option>
+                <option value="2002">2002</option>
+                <option value="2003">2003</option>
+                <option value="2004">2004</option>
+                <option value="2005">2005</option>
+                <option value="2006">2006</option>
+                <option value="2007">2007</option>
+                <option value="2008">2008</option>
+                <option value="2009">2009</option>
+                <option value="2010">2010</option>
+            
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+            </select>  
+            
+                <label><b>To:</b></label>
+            <select>
+                <option value="" selected>--select--</option>
+                <option value="1960">1960</option>
+                <option value="1961">1961</option>
+                <option value="1962">1962</option>
+                <option value="1963">1963</option>
+                <option value="1964">1964</option>
+                <option value="1965">1965</option>
+                <option value="1966">1966</option>
+                <option value="1967">1967</option>
+                <option value="1968">1968</option>
+                <option value="1969">1969</option>
+                <option value="1970">1970</option>
+            
+                <option value="1971">1971</option>
+                <option value="1972">1972</option>
+                <option value="1973">1973</option>
+                <option value="1974">1974</option>
+                <option value="1975">1975</option>
+                <option value="1976">1976</option>
+                <option value="1977">1977</option>
+                <option value="1978">1978</option>
+                <option value="1979">1979</option>
+                <option value="1980">1980</option>
+            
+                <option value="1981">1981</option>
+                <option value="1982">1982</option>
+                <option value="1983">1983</option>
+                <option value="1984">1984</option>
+                <option value="1985">1985</option>
+                <option value="1986">1986</option>
+                <option value="1987">1987</option>
+                <option value="1988">1988</option>
+                <option value="1989">1989</option>
+                <option value="1990">1990</option>
+                
+                <option value="1991">1991</option>
+                <option value="1992">1992</option>
+                <option value="1993">1993</option>
+                <option value="1994">1994</option>
+                <option value="1995">1995</option>
+                <option value="1996">1996</option>
+                <option value="1997">1997</option>
+                <option value="1998">1998</option>
+                <option value="1999">1999</option>
+                <option value="2000">2000</option>
+            
+                <option value="2001">2001</option>
+                <option value="2002">2002</option>
+                <option value="2003">2003</option>
+                <option value="2004">2004</option>
+                <option value="2005">2005</option>
+                <option value="2006">2006</option>
+                <option value="2007">2007</option>
+                <option value="2008">2008</option>
+                <option value="2009">2009</option>
+                <option value="2010">2010</option>
+            
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+            </select><label><b>Certificate Obtained:</b></label>
+            <select>
+                <option value="" selected>--select--</option>
+                <option value="OND">OND</option>
+                <option value="ND">ND</option>
+                <option value="HND">HND</option>
+                <option value="BSC">BSC</option>
+                <option value="BTECH">BTECH</option>
+              
+            </select><br /><br />
+            <label><b>School:</b></label><br />
+            <input type="text" name="" placeholder="ENTER SCHOOL NAME" required><br /> -->
+            
+            <h3 align="center"><b>ENTER O LEVEL SUBJECTS AND GRADES</b></h3>
+            <label><b>Exam</b></label>
+            <select name="olevelexamname">
+                <option value="" selected>--select--</option>
+                <option value="SSCE">SSCE</option>
+                <option value="WASSCE">WASSCE</option>
+                <option value="NECO">NECO</option>
+                <option value="GCE">GCE</option>
+              
+            </select>
+            <label><b>Year</b></label> 
+            <select name="olevelexamyear">
+                <option value="" selected>--select--</option>
+                <option value="1960">1960</option>
+                <option value="1961">1961</option>
+                <option value="1962">1962</option>
+                <option value="1963">1963</option>
+                <option value="1964">1964</option>
+                <option value="1965">1965</option>
+                <option value="1966">1966</option>
+                <option value="1967">1967</option>
+                <option value="1968">1968</option>
+                <option value="1969">1969</option>
+                <option value="1970">1970</option>
+            
+                <option value="1971">1971</option>
+                <option value="1972">1972</option>
+                <option value="1973">1973</option>
+                <option value="1974">1974</option>
+                <option value="1975">1975</option>
+                <option value="1976">1976</option>
+                <option value="1977">1977</option>
+                <option value="1978">1978</option>
+                <option value="1979">1979</option>
+                <option value="1980">1980</option>
+            
+                <option value="1981">1981</option>
+                <option value="1982">1982</option>
+                <option value="1983">1983</option>
+                <option value="1984">1984</option>
+                <option value="1985">1985</option>
+                <option value="1986">1986</option>
+                <option value="1987">1987</option>
+                <option value="1988">1988</option>
+                <option value="1989">1989</option>
+                <option value="1990">1990</option>
+                
+                <option value="1991">1991</option>
+                <option value="1992">1992</option>
+                <option value="1993">1993</option>
+                <option value="1994">1994</option>
+                <option value="1995">1995</option>
+                <option value="1996">1996</option>
+                <option value="1997">1997</option>
+                <option value="1998">1998</option>
+                <option value="1999">1999</option>
+                <option value="2000">2000</option>
+            
+                <option value="2001">2001</option>
+                <option value="2002">2002</option>
+                <option value="2003">2003</option>
+                <option value="2004">2004</option>
+                <option value="2005">2005</option>
+                <option value="2006">2006</option>
+                <option value="2007">2007</option>
+                <option value="2008">2008</option>
+                <option value="2009">2009</option>
+                <option value="2010">2010</option>
+            
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+            
+            </select>
+            
+            <div class="o-subject">
+                <label><b>Subject </b></label>
+                <select name="oexamsub1">
+                    <option value="">--select--</option>
+                    <option value="ENGLISH">ENGLISH</option>
+                    <option value="MATHEMATICS">MATHEMATICS</option>
+                    <option value="ECONOMICS">ECONOMICS</option>
+                    <option value="LITERATURE">LITERATURE</option>
+                    <option value="AGRICULTURE">AGRICULTURE</option>
+                    <option value="GEOGRAPHY">GEOGRAPHY</option>
+                    <option value="PHYSICS">PHYSICS</option>
+                    <option value="BIOLOGY">BIOLOGY</option>
+                    <option value="CHEMISTRY">CHEMISTRY</option>
+                    <option value=""></option>
+                    <option></option>
+                    <option></option>
+                </select>
+                <label ><b>Grade</b></label>
+                <select name="oexamgrade1">
+                    <option value="">--select--</option>
+                    <option value="A1">A1</option>
+                    <option value="B2">B2</option>
+                    <option value="B3">B3</option>
+                    <option value="C4">C4</option>
+                    <option value="C5">C5</option>
+                    <option value="C6">C6</option>
+                    <option value="D7">D7</option>
+                    <option value="E8">E8</option>
+                    <option value="F9">F9</option>
+                   
+                </select>
+
+
+            </div>
+          
+            
+            <!--  -->
+            <div class="o-subject">
+            <label><b>Subject </b></label>
+            <select name="oexamsub2">
+                <option value="">--select--</option>
+                <option value="ENGLISH">ENGLISH</option>
+                <option value="MATHEMATICS">MATHEMATICS</option>
+                <option value="ECONOMICS">ECONOMICS</option>
+                <option value="LITERATURE">LITERATURE</option>
+                <option value="AGRICULTURE">AGRICULTURE</option>
+                <option value="GEOGRAPHY">GEOGRAPHY</option>
+                <option value="PHYSICS">PHYSICS</option>
+                <option value="BIOLOGY">BIOLOGY</option>
+                <option value="CHEMISTRY">CHEMISTRY</option>
+                <option value=""></option>
+                <option></option>
+                <option></option>
+            </select>
+            <label><b>Grade</b></label>
+            <select name="oexamgrade2">
+               
+                <option value="">--select--</option>
+                <option value="A1">A1</option>
+                <option value="B2">B2</option>
+                <option value="B3">B3</option>
+                <option value="C4">C4</option>
+                <option value="C5">C5</option>
+                <option value="C6">C6</option>
+                <option value="D7">D7</option>
+                <option value="E8">E8</option>
+                <option value="F9">F9</option>
+               
+            </select>
+
+            </div>
+            <!--  -->
+            <div class="o-subject">
+            <label><b>Subject </b></label>
+            <select name="oexamsub3">
+                <option value="">--select--</option>
+                <option value="ENGLISH">ENGLISH</option>
+                <option value="MATHEMATICS">MATHEMATICS</option>
+                <option value="ECONOMICS">ECONOMICS</option>
+                <option value="LITERATURE">LITERATURE</option>
+                <option value="AGRICULTURE">AGRICULTURE</option>
+                <option value="GEOGRAPHY">GEOGRAPHY</option>
+                <option value="PHYSICS">PHYSICS</option>
+                <option value="BIOLOGY">BIOLOGY</option>
+                <option value="CHEMISTRY">CHEMISTRY</option>
+                <option value=""></option>
+                <option></option>
+                <option></option>
+            </select>
+            <label><b>Grade</b></label>
+            <select name="oexamgrade3">
+                <option value="">--select--</option>
+                <option value="A1">A1</option>
+                <option value="B2">B2</option>
+                <option value="B3">B3</option>
+                <option value="C4">C4</option>
+                <option value="C5">C5</option>
+                <option value="C6">C6</option>
+                <option value="D7">D7</option>
+                <option value="E8">E8</option>
+                <option value="F9">F9</option>
+               
+            </select>
+            </div>
+            
+            <!--  -->
+            <div class="o-subject">
+            <label><b>Subject </b></label>
+            <select name="oexamsub4">
+                <option value="">--select--</option>
+                <option value="ENGLISH">ENGLISH</option>
+                <option value="MATHEMATICS">MATHEMATICS</option>
+                <option value="ECONOMICS">ECONOMICS</option>
+                <option value="LITERATURE">LITERATURE</option>
+                <option value="AGRICULTURE">AGRICULTURE</option>
+                <option value="GEOGRAPHY">GEOGRAPHY</option>
+                <option value="PHYSICS">PHYSICS</option>
+                <option value="BIOLOGY">BIOLOGY</option>
+                <option value="CHEMISTRY">CHEMISTRY</option>
+                <option value=""></option>
+                <option></option>
+                <option></option>
+            </select>
+            <label><b>Grade</b></label>
+            <select name="oexamgrade4">
+               
+                <option value="">--select--</option>
+                <option value="A1">A1</option>
+                <option value="B2">B2</option>
+                <option value="B3">B3</option>
+                <option value="C4">C4</option>
+                <option value="C5">C5</option>
+                <option value="C6">C6</option>
+                <option value="D7">D7</option>
+                <option value="E8">E8</option>
+                <option value="F9">F9</option>
+               
+            </select>
+            </div>
+            <!--  -->
+            <div class="o-subject">
+            <label><b>Subject </b></label>
+            <select name="oexamsub5">
+                <option value="">--select--</option>
+                <option value="ENGLISH">ENGLISH</option>
+                <option value="MATHEMATICS">MATHEMATICS</option>
+                <option value="ECONOMICS">ECONOMICS</option>
+                <option value="LITERATURE">LITERATURE</option>
+                <option value="AGRICULTURE">AGRICULTURE</option>
+                <option value="GEOGRAPHY">GEOGRAPHY</option>
+                <option value="PHYSICS">PHYSICS</option>
+                <option value="BIOLOGY">BIOLOGY</option>
+                <option value="CHEMISTRY">CHEMISTRY</option>
+                <option value=""></option>
+                <option></option>
+                <option></option>
+            </select>
+            <label><b>Grade</b></label>
+            <select name="oexamgrade5">
+                <option value="">--select--</option>
+                <option value="A1">A1</option>
+                <option value="B2">B2</option>
+                <option value="B3">B3</option>
+                <option value="C4">C4</option>
+                <option value="C5">C5</option>
+                <option value="C6">C6</option>
+                <option value="D7">D7</option>
+                <option value="E8">E8</option>
+                <option value="F9">F9</option>
+               
+            </select>
+            </div>
+            
+            <!--  -->
+            <div class="o-subject">
+            <label><b>Subject </b></label>
+            <select name="oexamsub6">
+                <option value="">--select--</option>
+                <option value="ENGLISH">ENGLISH</option>
+                <option value="MATHEMATICS">MATHEMATICS</option>
+                <option value="ECONOMICS">ECONOMICS</option>
+                <option value="LITERATURE">LITERATURE</option>
+                <option value="AGRICULTURE">AGRICULTURE</option>
+                <option value="GEOGRAPHY">GEOGRAPHY</option>
+                <option value="PHYSICS">PHYSICS</option>
+                <option value="BIOLOGY">BIOLOGY</option>
+                <option value="CHEMISTRY">CHEMISTRY</option>
+                <option value=""></option>
+                <option></option>
+                <option></option>
+            </select>
+            <label><b>Grade</b></label>
+            <select name="oexamgrade6">
+               
+                <option value="">--select--</option>
+                <option value="A1">A1</option>
+                <option value="B2">B2</option>
+                <option value="B3">B3</option>
+                <option value="C4">C4</option>
+                <option value="C5">C5</option>
+                <option value="C6">C6</option>
+                <option value="D7">D7</option>
+                <option value="E8">E8</option>
+                <option value="F9">F9</option>
+               
+            </select>
+            </div>
+            <!--  -->
+            <div class="o-subject">
+            <label><b>Subject </b></label>
+            <select name="oexamsub7">
+                <option value="">--select--</option>
+                <option value="ENGLISH">ENGLISH</option>
+                <option value="MATHEMATICS">MATHEMATICS</option>
+                <option value="ECONOMICS">ECONOMICS</option>
+                <option value="LITERATURE">LITERATURE</option>
+                <option value="AGRICULTURE">AGRICULTURE</option>
+                <option value="GEOGRAPHY">GEOGRAPHY</option>
+                <option value="PHYSICS">PHYSICS</option>
+                <option value="BIOLOGY">BIOLOGY</option>
+                <option value="CHEMISTRY">CHEMISTRY</option>
+                <option value=""></option>
+                <option></option>
+                <option></option>
+            </select>
+            <label><b>Grade</b></label>
+            <select name="oexamgrade7">
+                <option value="">--select--</option>
+                <option value="A1">A1</option>
+                <option value="B2">B2</option>
+                <option value="B3">B3</option>
+                <option value="C4">C4</option>
+                <option value="C5">C5</option>
+                <option value="C6">C6</option>
+                <option value="D7">D7</option>
+                <option value="E8">E8</option>
+                <option value="F9">F9</option>
+               
+            </select>
+            </div>
+            
+            <!--  -->
+            <div class="o-subject">
+            <label><b>Subject</b></label>
+            <select name="oexamsub8">
+                <option value="">--select--</option>
+                <option value="ENGLISH">ENGLISH</option>
+                <option value="MATHEMATICS">MATHEMATICS</option>
+                <option value="ECONOMICS">ECONOMICS</option>
+                <option value="LITERATURE">LITERATURE</option>
+                <option value="AGRICULTURE">AGRICULTURE</option>
+                <option value="GEOGRAPHY">GEOGRAPHY</option>
+                <option value="PHYSICS">PHYSICS</option>
+                <option value="BIOLOGY">BIOLOGY</option>
+                <option value="CHEMISTRY">CHEMISTRY</option>
+                <option value=""></option>
+                <option></option>
+                <option></option>
+            </select>
+            <label><b>Grade</b></label>
+            <select name="oexamgrade8">
+               
+                <option value="">--select--</option>
+                <option value="A1">A1</option>
+                <option value="B2">B2</option>
+                <option value="B3">B3</option>
+                <option value="C4">C4</option>
+                <option value="C5">C5</option>
+                <option value="C6">C6</option>
+                <option value="D7">D7</option>
+                <option value="E8">E8</option>
+                <option value="F9">F9</option>
+               
+            </select>
+            </div>
+            <!--  -->
+            <div class="o-subject">
+            <label><b>Subject </b></label>
+            <select name="oexamsub9">
+                <option value="">--select--</option>
+                <option value="ENGLISH">ENGLISH</option>
+                <option value="MATHEMATICS">MATHEMATICS</option>
+                <option value="ECONOMICS">ECONOMICS</option>
+                <option value="LITERATURE">LITERATURE</option>
+                <option value="AGRICULTURE">AGRICULTURE</option>
+                <option value="GEOGRAPHY">GEOGRAPHY</option>
+                <option value="PHYSICS">PHYSICS</option>
+                <option value="BIOLOGY">BIOLOGY</option>
+                <option value="CHEMISTRY">CHEMISTRY</option>
+                <option value=""></option>
+                <option></option>
+                <option></option>
+            </select>
+            <label><b>Grade</b></label>
+            <select name="oexamgrade9">
+                <option value="">--select--</option>
+                <option value="A1">A1</option>
+                <option value="B2">B2</option>
+                <option value="B3">B3</option>
+                <option value="C4">C4</option>
+                <option value="C5">C5</option>
+                <option value="C6">C6</option>
+                <option value="D7">D7</option>
+                <option value="E8">E8</option>
+                <option value="F9">F9</option>
+               
+            </select>
+            </div>
+            
+            <!--  -->
+            <div class="o-subject">
+            <label><b>Subject </b></label>
+            <select name="oexamsub10">
+                <option value="">--select--</option>
+                <option value="ENGLISH">ENGLISH</option>
+                <option value="MATHEMATICS">MATHEMATICS</option>
+                <option value="ECONOMICS">ECONOMICS</option>
+                <option value="LITERATURE">LITERATURE</option>
+                <option value="AGRICULTURE">AGRICULTURE</option>
+                <option value="GEOGRAPHY">GEOGRAPHY</option>
+                <option value="PHYSICS">PHYSICS</option>
+                <option value="BIOLOGY">BIOLOGY</option>
+                <option value="CHEMISTRY">CHEMISTRY</option>
+                <option value=""></option>
+                <option></option>
+                <option></option>
+            </select>
+            <label><b>Grade</b></label>
+            <select name="oexamgrade10">
+               
+                <option value="">--select--</option>
+                <option value="A1">A1</option>
+                <option value="B2">B2</option>
+                <option value="B3">B3</option>
+                <option value="C4">C4</option>
+                <option value="C5">C5</option>
+                <option value="C6">C6</option>
+                <option value="D7">D7</option>
+                <option value="E8">E8</option>
+                <option value="F9">F9</option>
+               
+            </select>
+            </div>
+            <button type="submit" class="btn btn-success"> Submit</button> 
+            </form>
+       
+        <!-- next button -->
+        <!-- <div>
+        <div class="next-button">
+            <a href="users/person-contact"><button>back</button> </a>
+        </div>
+        <div class="next-button">
+            <a href="users/applied-program"> <button>next</button> </a>
+        </div>
+    </div> -->
+            
+    </div>
+</div>
+</div>
+
+<%- include('_footer') %> 

@@ -1,0 +1,65 @@
+
+
+
+
+<%- include('header') %>
+
+
+
+
+
+<!-- <div class="container"> -->
+    <div class="signup-container">
+
+    <div class="signup-panel">
+        <div class="signup-header">
+            <h1 align="center">sign up</h1>
+
+        </div>
+        <div class="signup-body">
+
+            <form action="/users/signup" method="POST" enctype="multipart/form-data" id="signup-form">
+               <div class="signup-form-group">
+                <input name="fullname" type="text" class="form-control "  placeholder="full name" id="fullname" >
+
+               </div>
+               
+               <div class="signup-form-group">
+                    <input type="email" name="username"  class="form-control" placeholder="example@gmail.com" id="username" >
+
+                </div>
+               
+                <div class="signup-form-group">
+                <textarea name="bio" placeholder="enter your bio" class="form-control" id="bio"></textarea>
+
+               </div>
+             
+               <div class="signup-form-group">
+                <input name="password" type="password" class="form-control" placeholder="password" id="password">
+
+               </div>
+               <div class="signup-form-group">
+                <input name="password2" type="password" class="form-control" placeholder="repeat password" id="password2" ><br />
+
+               </div>
+               <div class="signup-form-group">
+                <input type="file" name="profileimage" class="form-control"  placeholder="passport"> 
+
+               </div>
+               <button type="submit" class="btn btn-success"> Submit</button>
+               
+                </form>
+
+        </div>
+
+    </div>
+    <script type="text/javascript" src="/signup.js">
+    </script>
+
+</div>
+</div>
+   
+
+
+
+<%- include('_footer') %> 

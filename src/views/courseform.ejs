@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+<title> kumase College Course Form </title>
+<meta charset="="utf-8 />
+<meta name="viewport" content="width = device-width, initial-scale = 1.0"/>
+<style type="text/css">
+table,.head{
+border:1px solid black;
+}
+table{
+width: 100%;
+border-collapse:collapse;
+}
+.head{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	background-color:#ddd;
+	height:auto;
+}
+.p-details td{
+	height: 30px;
+	border-bottom: 1px solid #ddd;
+
+}
+/* td{
+height: 50px;
+border-bottom: 1px solid #ddd;
+
+} */
+#merge-course{
+padding:20px;
+text-align:center;
+color:red;
+}
+#merge-carry{
+padding:20px;
+text-align:center;
+color:red;
+}
+/* .c-details{
+	background: url(/logo.png) no-repeat center;
+} */
+.c-details td{
+	border:2px solid dodgerblue;
+	height: 50px;
+}
+
+#logo2{
+	/* border:1px solid black; */
+	margin-top:60px;
+	margin-right:40px;
+}
+#user-image{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	/* border:1px solid black; */
+	/* margin:1%; */
+	/* padding:1%; */
+}
+</style>
+</head>
+<body>
+<div style="overflow-x:auto;">
+<div class="head"> 
+<div id ="logo1">
+	<a href="javascript:void(0)" title="school logo"><img src="/logo.png" style=" margin:5px" height="150" width="170" alt="school logo"></a>
+</div>
+<div id="logo2">
+	<img src="/logo3.png"  height="40" alt="school name">
+</div>
+<div id ="user-image">
+	<img src= /uploads/<%= user.image %> style=" margin:5px" height="120" width="115" alt="user image">
+</div>
+
+</div>
+<table class="p-details">
+<th>
+    <tr>
+	<td><b>REGISTRATION NUMBER:</b> <%= user.regnumber %></td>
+	<td><b>DEPARMENT: </b><%= user.department %></td>
+	<td><b>COURSE:</b> <%= user.regnumber %> </td>
+	
+	</tr> 
+	
+	<tr>
+	<td ><b>TITLE:</b> <%= user.title %></td>
+	<td ><b>SURNAME:</b> <%= user.surname %></td>
+	<td><b>FIRST NAME:</b> <%= user.firstname %></td>
+	</tr> 
+	
+	<tr>
+	<td><b>LAST NAME:</b> <%= user.lastname %></td>
+	<td><b>MARITAL STATUS:</b> <%= user.maritalstatus %></td>
+	<td><b>GENDER:</b> <%= user.gender %></td>
+	</tr> 
+	
+	<tr>
+	<td><b>DATE OF BIRTH:</b> <%= user.dateofbirth%></td>
+	<td><b>NATIONALITY:</b> <%= user.nationality %></td>
+	<td><b>STATE OF ORIGIN:</b> <%= user.stateoforigin %></td>
+	
+	</tr> 
+	
+	<tr>
+	<td><b>LEVEL: </b><%= user.level %></td>
+	<td><b>EMAIL:</b> <%= user.email %></td>
+	<td></td>
+	</tr> 
+	
+	<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+	</tr> 
+	</th>
+		<tr>
+		</table>
+
+
+		<table class="c-details">
+	<td id="merge-course" colspan="4" ><b>COURSE DETAILS</b></td>
+
+	</tr>
+	
+		<tr>
+	<td  style="width:150px;text-align:center" ><b>Course Code</b></td>
+	<td  style="text-align:center"><b>Unit Load</b></td>
+	<td style="text-align:center"><b>Course Title</b></td>
+	<td  style="text-align:center"><b>Course Lecturer</b></td>
+	</tr> 
+		<tr>
+	<td ></td>
+	<td style="width:100px"></td>
+	<td ></td>
+	<td ></td>
+	</tr> 
+	
+		<tr>
+	<td ></td>
+	<td ></td>
+	<td  style="width:600px"></td>
+	<td ></td>
+	</tr> 
+		<tr>
+	<td ></td>
+	<td ></td>
+	<td ></td>
+	<td ></td>
+	</tr> 
+		<tr>
+	<td ></td>
+	<td ></td>
+	<td ></td>
+	<td ></td>
+	</tr> 
+		<tr>
+	<td ></td>
+	<td ></td>
+	<td ></td>
+	<td ></td>
+	</tr> 
+		<tr>
+	<td ></td>
+	<td ></td>
+	<td ></td>
+	<td ></td>
+	</tr> 
+		<tr>
+	<td ></td>
+	<td ></td>
+	<td ></td>
+	<td ></td>
+	</tr> 
+	
+		<tr>
+	<td ></td>
+	<td ></td>
+	<td ></td>
+	<td ></td>
+	</tr> 
+		<tr>
+	<td ></td>
+	<td ></td>
+	<td ></td>
+	<td ></td>
+	</tr> 
+		<tr>
+	<td ></td>
+	<td ></td>
+	<td ></td>
+	<td ></td>
+	</tr> 
+	
+		<tr>
+	<td colspan="4" id="merge-carry"><b>CARRY OVER COURSE</b></td>
+	
+	</tr> 
+		<tr>
+	<td ></td>
+	<td ></td>
+	<td ></td>
+	<td ></td>
+	</tr> 
+		<tr>
+	<td ></td>
+	<td ></td>
+	<td ></td>
+	<td ></td>
+	</tr> 
+		<tr>
+	<td ></td>
+	<td ></td>
+	<td ></td>
+	<td ></td>
+	</tr> 
+		<tr>
+	<td ></td>
+	<td ></td>
+	<td ></td>
+	<td ></td>
+	</tr> 
+	
+
+
+</table>
+</div>
+
+<pre>
+
+
+
+
+
+........................................                                                                         ...........................................
+     <b>Dean of student affairs </b>                                                                                          <b> Dep. Provost Academics</b>  
+
+
+	 
+	 
+	 
+........................................                                                                         ............................................
+              <b>Bursar  </b>                                                                                                          <b>HOD/Coordinator</b>                       
+                                                        
+														
+														  
+                                                      
+	                                                     .......................................
+                                                                           <b>Provost</b> 	
+</pre>
+</form>
+
+</body>
+</html>
