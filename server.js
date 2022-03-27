@@ -5,7 +5,7 @@ const cookieParser = require('cookie-parser');
 
 const session = require('express-session');
 
-const messages =require('express-messages');
+const messages = require('express-messages');
 
 const { validationResult } = require('express-validator');
 
@@ -17,7 +17,7 @@ const passport = require('passport');
 
 const mongoose = require('mongoose');
 
-const helmet = require('helmet');
+// const helmet = require('helmet');
 
 const compression = require('compression');
 
@@ -25,7 +25,7 @@ const path = require('path');
 
 const http = require('http');
 
-const axios = require('axios').default;
+// const axios = require('axios').default;
 
 var cors = require('cors');
 
@@ -37,11 +37,12 @@ const setUpPassport = require('./src/auth/setupPassport');
 
 const notFoundAndErrorRoutes = require('./src/routes/notFoundAndErrorCatchRoutes');
 
-const connectToMongodb = require('./src/utils/mongoDbConnection');
+// const connectToMongodb = require('./src/utils/mongoDbConnection');
 
 const config = require('./src/config/config');
 
 require('dotenv').config();
+
 setUpPassport();
 
 const mongoConfig = {
@@ -50,7 +51,7 @@ const mongoConfig = {
     dbURI: config.db.devURI
 }
 
-connectToMongodb(mongoose, false, mongoConfig);
+// connectToMongodb(mongoose, false, mongoConfig);
 
 const app = express();
 
@@ -63,7 +64,7 @@ app.disable('x-powered-by');
 
 app.use(cors())
 
-app.set('port' , config.app.port);
+// app.set('port' , config.app.port);
 
 app.set('views' ,path.join( __dirname,  'src', 'views'));
 
@@ -160,8 +161,8 @@ app.use('/users' ,usersRoute);
 
 app.use(notFoundAndErrorRoutes);
 // start your server
-http.createServer(app).listen(app.get('port') , () => {
+http.createServer(app).listen(config.app.port || 3000 , () => {
 
-    console.log(`Kumase site started on port ${ app.get('port') }`)
+    console.log(`Kumase site started on port ${ config.app.port }`)
 
 });
