@@ -50,7 +50,7 @@ const mongoConfig = {
     dbURI: config.db.devURI
 }
 
-connectToMongodb(mongoose, mongoConfig);
+connectToMongodb(mongoose, false, mongoConfig);
 
 const app = express();
 
