@@ -35,7 +35,7 @@ const usersRoute = require('./src/routes/usersroute');
 
 const setUpPassport = require('./src/auth/setupPassport');
 
-const notFoundAndErrorRoutes = require('./src/routes/notFoundAndErrorCatchRoutes');
+const notFoundAndErrorRoutes = require('./src/routes/notFoundRoutes');
 
 const connectToMongodb = require('./src/utils/mongoDbConnection');
 
