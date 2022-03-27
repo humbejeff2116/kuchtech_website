@@ -35,7 +35,7 @@ const usersRoute = require('./src/routes/usersroute');
 
 const setUpPassport = require('./src/auth/setupPassport');
 
-const notFoundAndErrorRoutes = require('./src/routes/notFoundRoutes');
+// const notFoundAndErrorRoutes = require('./src/routes/notFoundRoutes');
 
 const connectToMongodb = require('./src/utils/mongoDbConnection');
 
@@ -131,7 +131,26 @@ app.use('/users', express.static(__dirname, +'/public'));
 
 app.use('/users' ,usersRoute);
 
-app.use(notFoundAndErrorRoutes);
+// app.use(notFoundAndErrorRoutes);
+
+app.use((req, res) => {
+
+    res.status(404).render('not-found/404', { title:'error' });
+
+});
+// handle caught errors
+app.use((err, req, res, next) => {
+
+    console.error(err);
+
+    next(err);
+})
+
+app.use((err, req, res, next) => {
+   
+    res.status(500).render('server-error/505');
+
+})
 
 http.createServer(app).listen(config.app.port || 3000 , () => {
 
