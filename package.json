@@ -5,7 +5,8 @@
   "main": "server.js",
   "license": "MIT",
   "scripts": {
-    "start": "node server.js",
+    "start": "yarn run server",
+    "server": "node server.js",
     "bundle": "browserify public/js/map.js -o public/js/bundle.js &  cp node_modules/leaflet/dist/leaflet.css public/css/leaflet.css"
   },
   "dependencies": {
