@@ -102,51 +102,47 @@ async function searchCourses({ searchCourseQuery }) {
         const searchedCourses = await fetchCourses(searchCourseQuery);
         
         // display results after 2000ms
-        setTimeout(()=> {
-
-            if (!searchedCourses?.status === 200 || searchedCourses?.data.length < 1 ) {
+        if (!searchedCourses?.status === 200 || searchedCourses?.data.length < 1 ) {
            
-                const notfoundTemplate = (
-    
-                    `<div class="index-courses-search-bar-report-error-result">
-                    <p> No result match your search</p>
-                    </div>`
-    
-                )
-    
-                searchFormButton.textContent = 'Search';
-    
-                searchResultsContainer.style.display = 'flex';
-    
-                return searchResults.innerHTML = notfoundTemplate; 
-    
-            }
+            const notfoundTemplate = (
 
-            searchResults.innerHTML = ``
-    
-            searchedCourses.data.forEach(course => {
-    
-                const  { id, title, courseDepartment, courseBrief, courseDetails } = course;
-                
-                searchResults.innerHTML += generateSearchResultTemp(
+                `<div class="index-courses-search-bar-report-error-result">
+                <p> No result match your search</p>
+                </div>`
 
-                    `
-                    <input type="text" value="${ title }"  hidden />
-                    <span> ${ title }</span>
-                    
-                    `
+            )
 
-                )
-               
-            })
-    
             searchFormButton.textContent = 'Search';
-            // display search results component after attaching search results
+
             searchResultsContainer.style.display = 'flex';
 
-            attachViewCourseDetailsEventListener()
+            return searchResults.innerHTML = notfoundTemplate; 
 
-        }, 2000)
+        }
+
+        searchResults.innerHTML = ``
+
+        searchedCourses.data.forEach(course => {
+
+            const  { id, title, courseDepartment, courseBrief, courseDetails } = course;
+            
+            searchResults.innerHTML += generateSearchResultTemp(
+
+                `
+                <input type="text" value="${ title }"  hidden />
+                <span> ${ title }</span>
+                
+                `
+
+            )
+           
+        })
+
+        searchFormButton.textContent = 'Search';
+        // display search results component after attaching search results
+        searchResultsContainer.style.display = 'flex';
+
+        attachViewCourseDetailsEventListener()
         
     } catch(err) {
 
