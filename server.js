@@ -17,7 +17,7 @@ const passport = require('passport');
 
 const mongoose = require('mongoose');
 
-// const helmet = require('helmet');
+const helmet = require('helmet');
 
 const compression = require('compression');
 
@@ -25,7 +25,7 @@ const path = require('path');
 
 const http = require('http');
 
-// const axios = require('axios').default;
+const axios = require('axios').default;
 
 var cors = require('cors');
 
@@ -37,7 +37,7 @@ const setUpPassport = require('./src/auth/setupPassport');
 
 const notFoundAndErrorRoutes = require('./src/routes/notFoundAndErrorCatchRoutes');
 
-// const connectToMongodb = require('./src/utils/mongoDbConnection');
+const connectToMongodb = require('./src/utils/mongoDbConnection');
 
 const config = require('./src/config/config');
 
@@ -51,7 +51,7 @@ const mongoConfig = {
     dbURI: config.db.devURI
 }
 
-// connectToMongodb(mongoose, false, mongoConfig);
+connectToMongodb(mongoose, false, mongoConfig);
 
 const app = express();
 
@@ -63,8 +63,6 @@ app.disable('x-powered-by');
 // } ));
 
 app.use(cors())
-
-// app.set('port' , config.app.port);
 
 app.set('views' ,path.join( __dirname,  'src', 'views'));
 
@@ -97,8 +95,11 @@ app.use(passport.session());
 app.use(flash());
 
 app.use((req, res, next) => {
+
     res.locals.messages = messages();
+
     next();
+
 });
 
 
@@ -121,48 +122,19 @@ app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
     next();
 });
-// serve static files
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(indexRoute);
-
-
-app.get('/api.mapbox.com.styles/:idPart1/:idPart2/:z/:x/:y/:accessToken', async (req, res) => {
-
-
-
-    try {
-
-        const { id, x, y, z, accessToken, idPart1, idPart2 } = req.params;
-
-        console.log(req.params)
-
-
-        const mapBoxResponse = await axios.get(`https://api.mapbox.com/styles/v1/${idPart1}/${idPart2}/tiles/${z}/${x}/${y}?access_token=${accessToken}`)
-         
-        console.log(mapBoxResponse.headers)
-        // console.log("response is", mapBoxResponse)
-
-        res.status(200).json(mapBoxResponse)
-        
-     
-
-    } catch(err) {
-
-        console.error(err)
-
-    }
-
-});
 
 app.use('/users', express.static(__dirname, +'/public'));
 
 app.use('/users' ,usersRoute);
 
 app.use(notFoundAndErrorRoutes);
-// start your server
+
 http.createServer(app).listen(config.app.port || 3000 , () => {
 
     console.log(`Kumase site started on port ${ config.app.port }`)
 
-});
+})
