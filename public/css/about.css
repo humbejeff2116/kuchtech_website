@@ -50,6 +50,7 @@
     min-height: 50vh;
     padding: 1%;
     background-color:var(--background-color);
+    flex-wrap: wrap;
     /* background-color: #cccccc; */
 }
 .about-college-mission-child{
@@ -338,6 +339,29 @@
 
     .about-college-qoute-button-wrapper button{ 
         height: 55px;
+    }
+    
+}
+@media only screen and (max-width: 480px) {
+    .about-college-container{
+       padding: 2%;
+    }
+    .about-college-qoute-button-container{
+        bottom: 0%;
+    }
+    .about-college-qoute-button-wrapper{  
+        width: 50%;
+    }
+    .about-college-mission-container{        
+        padding: 2%;
+    }
+    .about-college-mission-child{
+        width: 100%;
+        margin-bottom: 2%;
+    }
+
+    .about-college-qoute-button-wrapper button{ 
+        height: 50px;
     }
     
 }
