@@ -39,3 +39,32 @@
 .admission-writeup p a:hover{
    text-decoration: underline;
 }
+
+
+@media only screen and (max-width: 1024px) {
+
+    
+    
+}
+@media only screen and (max-width: 600px) {
+    .admission-container{
+        padding: 2%;
+        min-height: 50vh;   
+    }
+    .admission-wrapper{
+        border:1px solid var(--prim-border-color);
+        /* box-shadow: 1px 1px 2px #6d6d6d; */
+        width: 100%;
+        padding: 3%;
+        border-radius: 4px;
+    
+    }
+    
+    
+}
+@media only screen and (max-width: 480px) {
+    
+    .admission-writeup p{
+        font-size: 1.05rem;
+    }
+}

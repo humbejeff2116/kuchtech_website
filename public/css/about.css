@@ -346,19 +346,25 @@
     .about-college-container{
        padding: 2%;
     }
+    .about-college-writeup p{
+        font-size: 1.1rem;
+        text-align: justify;
+        line-height: 1.5;
+    }
     .about-college-qoute-button-container{
         bottom: 0%;
     }
     .about-college-qoute-button-wrapper{  
-        width: 50%;
+        width: 55%;
     }
     .about-college-mission-container{        
         padding: 2%;
     }
     .about-college-mission-child{
         width: 100%;
-        margin-bottom: 2%;
+        margin-bottom: 4%;
     }
+    
 
     .about-college-qoute-button-wrapper button{ 
         height: 50px;
