@@ -35,9 +35,15 @@ function runScriptOnDocumentLoad() {
 // )
 
 function removeModal() {
+
     const modalContainer = document.querySelector('.modal-container-wrapper')
+
     const closeButton = document.querySelector('.modal-comment-product-comment-bttn-wrapper');
+
     closeButton.addEventListener('click', function(e) {
+
         modalContainer.style.display = 'none'
+
     })
+    
 }

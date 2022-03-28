@@ -66,8 +66,6 @@ class IndexController {
 
 
         const posts = await blogWriter.setRelativePath(blogsFilePath, 'blog.json').getAllData();
-     
-        console.log(posts);
 
         return res.status(200).json({ 
             status: 200, 

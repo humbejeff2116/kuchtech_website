@@ -66,14 +66,21 @@ async function getAllBlogPost() {
 
 function displayHighlight(blogPosts, indexBlogPostHighlitsContainer) {
    
-    indexBlogPostHighlitsContainer.innerHTML = ``
+    indexBlogPostHighlitsContainer.innerHTML = (
+        
+        `
+       
+        `
+
+    )
 
     blogPosts.forEach( post => {
 
         const  { id, title,imageSrc, date, tag, } = post;
         
         const blogHighlightTemplate = (
-            `<div class="index-blog-post">
+            `
+            <div class="index-blog-post">
             <input type="text" value=${ id } hidden /> 
            
             <div class="index-blog-post-title">
@@ -94,7 +101,7 @@ function displayHighlight(blogPosts, indexBlogPostHighlitsContainer) {
 
 function displayBlogPostWriteup(blogPosts, blogPostWriteupContainer) {
     
-    blogPostWriteupContainer.innerHTML = ``
+    blogPostWriteupContainer.innerHTML = ` ` 
 
     const blogPostWriteupTemplate = generateBlogWriteupTemplate(blogPosts[0]);
     
@@ -126,7 +133,13 @@ function attachViewPostListener() {
 
 async function viewBlogPost(blogPostId, blogPostWriteupContainer) {
 
+    const screenWidth = window.screen.width;
+
+    const screenHeight = window.screen.height
+
     const blogPostWrapper  = document.querySelector('.index-blog-post-writeup-wrapper');
+
+    let blogWriteupCloseButton ;
 
     const loader = (
         `
@@ -135,6 +148,47 @@ async function viewBlogPost(blogPostId, blogPostWriteupContainer) {
         </div>
         `
     )
+
+    if (screenWidth <= 600) {
+
+       blogPostWrapper.style.display = 'none';
+
+       blogPostWriteupContainer.style.display = 'flex'
+
+        blogPostWriteupContainer.innerHTML = loader;
+
+        const post = await getBlogPost(blogPostId);
+    
+        const blogPostWriteupTemplate = generateBlogWriteupTemplate(post[0])
+
+        setTimeout(()=> {
+
+            blogPostWriteupContainer.innerHTML =  `
+                <div class="blog-post-modal-bttn-wrapper">
+                <span> X </span>
+                </div>
+                `
+
+            
+
+            blogPostWriteupContainer.innerHTML += blogPostWriteupTemplate;
+
+            blogPostWrapper.style.display = 'flex'
+
+            blogPostWriteupContainer.scrollTo(0, 0)
+
+            blogWriteupCloseButton = document.querySelector('.blog-post-modal-bttn-wrapper');
+
+
+            attachCloseModal(blogWriteupCloseButton, blogPostWriteupContainer)
+            
+        }, 1000)
+
+        
+        
+        return ;
+        
+    }
 
     blogPostWrapper.style.display = 'none';
 
@@ -154,6 +208,16 @@ async function viewBlogPost(blogPostId, blogPostWriteupContainer) {
         
     }, 1000)
    
+}
+
+function attachCloseModal(modalCloseButton, modalContainer) {
+
+    modalCloseButton.addEventListener('click', function(e) {
+
+        modalContainer.style.display = 'none'
+
+    })
+    
 }
 
 function generateBlogWriteupTemplate({ id, title, imageSrc, date, tag, details }) {

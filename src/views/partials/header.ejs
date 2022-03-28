@@ -164,11 +164,7 @@ crossorigin="anonymous"
                                     <!-- Admissions -->
     
                                     <div class="nav-item dropdown" > 
-                                        <!--  TODO... change admissions to dropdown to include
-                                            1) entry-requirements link
-                                            2) admissions link
-                                            3) e-application link
-                                          -->
+                                        
                                         <a class="<% title = 'login' ? 'active' : ''  %> " href='#' onclick="event.preventDefault()">
                                             <span>
                                               ADMISSION
@@ -234,24 +230,13 @@ crossorigin="anonymous"
                                             </span>
                                         </a> 
                                     </div>
-                                    <!-- login -->
-                                    <!-- <div class="nav-item" >                               
-                                        <a class="<% title = 'login' ? 'active' : ''  %> " href="/users/login">
-                                            <span>
-                                                Login
-                                            </span>
-                                        </a> 
-                                    </div> -->
-                                    <!-- signup -->
-    
-                                    <!-- <div class="nav-item" >                               
-                                        <a class="<% title = 'signup' ? 'active' : ''  %> " href="/users/signup">
-                                            <span>
-                                                Signup
-                                            </span>
-                                        </a> 
-                                    </div> -->
+                                </div>
 
+                                <div class="nav-3">
+                                    <!-- cousre registration -->
+                                    <div class="nav-item" >                               
+                                        <span class="mobile-nav" onclick="openNav()">&#9776</span>
+                                    </div>
                                 </div>
                                                    
                             <% } %>                   
@@ -261,9 +246,69 @@ crossorigin="anonymous"
                
         </header>
         <!-- TODO... inclue side navigation here -->
-        <!-- <%- include('_sidenav') %> -->
+        <div id="mysidenav" class="sidenav-container">
+            <span class="closebtn" onclick="closeNav()">&times;</span>
+            <div  class="sidenav">
+                <a href="/">
+                    <span>
+                        HOME
+                     </span>
+                </a>
+                <a href="/about">
+                    <span>
+                        ABOUT
+                     </span>
+                </a>
+                <a href="/admissions">
+                    <span>
+                        ADMISSION
+                      </span>
+                </a>
+                <a href="/entry-requirements">
+                    <span>
+                        ENTRY REQUIREMENTS
+                      </span>
+                </a>
+                <a href="/e-application">
+                    <span>
+                        E-APPLICATION
+                    </span>
+                </a>
+                <a href="/departments">
+                    <span>
+                        DEPARTMENTS
+                    </span>
+                </ahref>
+                <a href="/contact">
+                    <span>
+                        CONTACT
+                    </span>
+                </a>
+                <a href="/blog">
+                    <span>
+                        BLOG
+                    </span>
+                </a>
+                <!-- <a href="/students/portal">
+                    <span>
+                        STUDENT PORTAL
+                     </span>
+                </a> -->
+                <a href="#">
+                    <span>
+                        STUDENT PORTAL
+                     </span>
+                </a>
+             
+             </div>
+
+        </div>
+        
+
+
         <div class="progress"></div>
         <div class="container">
+            
        
 
         <div class="err-container" >
@@ -297,47 +342,35 @@ crossorigin="anonymous"
                 <div id="info" class="alert alert-info" role="alert">
                     <%= info %>
                 </div>
-                <script>
-                    // script to clear alert box after 8 seconds
-                    // alertInfo.className= alert-fadeout
-                    // then style alert fadeout
-                    window.onload = function(){
-                        let alertInfo = document.getElementById('info');
-                        if(alertInfo.textContent ){
-                            setTimeout(()=>{
-                                alertInfo.style.display = 'none';
-                            },8000);
-                        }
-                    }
 
-
-
-    //     const handleScroll = ( ) => {
-    //         let scrolled = false;
-          
-    //      const offset = window.scrollY;
-    //      if(offset>200){
-    //          scrolled = true;
-    //      } else{
-    //         scrolled = false;
-    //      }
-
-    //  }  
-    //    window.addEventListener('scroll', handleScroll); 
-    //    let header = document.getElementsByTagName('header')[0];
-      
-    //    if(scrolled){
-    //        header.attributes.className = 'navbar'
-    //    }     
-    
-    window.addEventListener('scroll',()=>{
-        document.body.style.setProperty('--scroll', window.pageYOffset/(document.body.offsetHeight-window.innerHeight))
-    },false);
-                </script>
 
                 
           <%  }) %>
         </div>
-      
 
+        <script>
+
+        function openNav() {
+
+            document.getElementById('mysidenav').style.width="100%";
+            setTimeout(()=>{
+                document.querySelector('.sidenav').style.opacity="1";
+            }, 500)
+           
+            /* included for off canvas if it is only overlay you dont
+            include this style*/
+            // document.getElementsByClassName('container')[0].style.marginLeft='250px'
+            // document.body.style.backgroundColor="rgba(0,0,0,0.4)";
+
+        }
+
+        function closeNav(){
+            document.querySelector('.sidenav').style.opacity="0";
+            document.getElementById('mysidenav').style.width="0";
+            // document.getElementsByClassName('container')[0].style.marginLeft='0'
+            // document.body.style.backgroundColor="white";
+
+        }
+
+        </script>
   

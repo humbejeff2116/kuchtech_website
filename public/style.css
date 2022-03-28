@@ -110,8 +110,8 @@ header{
     justify-content: space-around;
     position:sticky;
     width:100%;
-    top:0px;
-    padding: 0 0.5% ;
+    top:0;
+    padding: 0 0.5%;
     z-index:1;
     /* border-bottom:0.2px solid #356f80; */
     border-radius: 0 0 4px 4px;
@@ -163,6 +163,17 @@ header{
     align-items: flex-end;
     /* border:2px solid blue; */
     /* min-width: 35%; */
+
+}
+
+.nav-3{
+        display: none;   
+}
+.mobile-nav{
+    font-size:1.3rem; 
+    cursor:pointer;
+    font-weight: bold;
+    color: var(--text-color);
 
 }
 
@@ -239,6 +250,70 @@ header{
     border-radius: 4px;
     color: var(--prim-color);
 }
+
+/* modile nav style */
+.sidenav-container{
+    min-height:100%;
+    width:0;
+    position:fixed;
+    z-index:1;
+    top:0;
+    left:0;
+    background-color:#111;
+    background: rgba(0, 0, 0, 0.5);
+    overflow-x:hidden;
+    transition:0.6s;
+    display: flex;
+    flex-direction: column;
+    /* padding-top:60px; */
+    /* border: 4px solid green; */
+
+}
+.sidenav{
+    background-color:var(--background-color);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-x:auto;
+    opacity: 0;
+    transition: 0.3s;
+    
+
+}
+.sidenav a{
+    padding:15px 15px;
+    text-decoration:none;
+    font-size:1rem;
+    color:var(--text-color);
+    font-weight: bold;
+    display:block;
+    transition:0.3s;
+    /* border: 4px solid green; */
+    /* margin-bottom: 3%; */
+}
+.sidenav a:hover{
+    /* color:var(--prim-color); */
+    background-color: #f0f0f0;
+    
+}
+.sidenav-container .closebtn{
+    position:absolute;
+    /* top:3%; */
+    right:3%;
+    font-size:2rem;
+    color: #818181;
+    cursor: pointer;
+}
+.main{
+    transition:0.5s;
+    padding:16px;
+}
+@media screen and (max-height: 450px){
+    .sidenav{padding-top:15px;}
+    .sidenav a{font-size:18px;}
+}
+
 
 .container{
     width:100%;
@@ -935,65 +1010,6 @@ text-decoration:underline;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media only screen  and (max-width:400px){
-    .container{
-        border:1px solid black;
-        width:100%;
-    }
-    .signup-container{ 
-          
-        min-height: 100vh;
-        width:100%;
-        top:-5px;         
-     }
-     .signup-panel{
-        border:1px solid black;       
-        
-         top:-4px; 
-         width:100%;
-         /* height:auto;                */
-     }
-     .signup-form-group input{
-         width:95%;
-         height:45px;  
-         margin-left:5px;       
-     }
-   
-     .signup-panel button{
-         width:100%;    
-        
-        left:0;     
-     }
-   
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media only screen and (max-width: 1024px) {
     .nav-1{
        
@@ -1004,6 +1020,111 @@ text-decoration:underline;
   
   }
 }
+
+@media only screen and (max-width: 600px) {
+    header{
+       /* min-height: 8vh; */
+       padding: 1.5%;
+      
+    }
+    .logo{
+        
+        width: 12%;
+        margin-left: 0.5rem;  
+    
+    }
+    .nav-links{
+        /* border:1px solid purple; */
+        margin-left:0;
+        justify-content: flex-end;
+        width:90%;
+    
+    }
+    .nav-1{
+       display: none;  
+    }
+    .nav-2{
+        display: none;
+        
+     }
+
+     .nav-3{
+        display: flex;
+       /* border:1px solid purple; */
+       margin-right: 1rem;   
+    }
+   
+    
+}
+@media only screen and (max-width: 480px) {
+    header{
+       /* min-height: 8vh; */
+       padding: 1%;
+      
+    }
+    .logo{
+        
+        width: 15%;
+    
+    }
+    .nav-links{
+        /* border:1px solid purple; */
+        margin-left:0;
+        justify-content: flex-end;
+        width:90%;
+    
+    }
+    .nav-1{
+       display: none;  
+    }
+    .nav-2{
+        display: none;
+        
+    }
+
+    .nav-3{
+         display: flex;
+        /* border:1px solid purple; */
+        /* margin-right: 2%;    */
+    }
+
+    .sidenav{
+        /* padding-top:15px; */
+    }
+     .sidenav a{
+        /* font-size:18px; */
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media only screen and (min-width: 29.8125rem /*477px*/) {

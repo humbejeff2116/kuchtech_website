@@ -319,3 +319,25 @@
     }
     
 }
+@media only screen and (max-width: 600px) {
+
+    .about-college-writeup h2{
+        font-size: 1.5rem;
+    }
+    .about-college-qoute-container h1{
+        width: 100%;
+        font-size: 1.7rem;
+    }
+
+    .about-college-qoute-button-wrapper{  
+        width: 35%;
+    }
+    .about-college-mission-child{
+        width: 28%;
+    }
+
+    .about-college-qoute-button-wrapper button{ 
+        height: 55px;
+    }
+    
+}
