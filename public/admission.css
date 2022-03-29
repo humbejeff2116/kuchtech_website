@@ -55,7 +55,7 @@
         border:1px solid var(--prim-border-color);
         /* box-shadow: 1px 1px 2px #6d6d6d; */
         width: 100%;
-        padding: 3%;
+        padding: 4%;
         border-radius: 4px;
     
     }
@@ -63,8 +63,14 @@
     
 }
 @media only screen and (max-width: 480px) {
+    .admission-heading h2{
+        font-size: var(--480px-h2-font-size);
+
+    }
     
     .admission-writeup p{
-        font-size: 1.05rem;
+        font-size: var(--480px-p-font-size);
+        text-align: unset;
+        line-height: var(--480px-p-line-height);
     }
 }

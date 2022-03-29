@@ -117,3 +117,10 @@
   .demo:hover {
     opacity: 1;
   }
+
+
+  @media screen and (max-width: 480px) {
+    .about-college-gallery-heading h2{
+      font-size: var(--480px-h2-font-size);
+    }
+  }

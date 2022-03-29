@@ -28,6 +28,13 @@
     --red-color: rgb(255, 84, 84);
     /* --red-color: red; */
 
+    --600px-p-line-height: 1.6;
+    --480px-p-line-height: 1.6;
+    --480px-p-font-size: 1rem;
+    --480px-h2-font-size: 1.15rem;
+    --480px-h3-font-size: 1.05rem;
+    /* --480px-p-line-height: 1.6; */
+
 
 }
 
@@ -288,7 +295,7 @@ header{
 .sidenav a{
     padding:15px 15px;
     text-decoration:none;
-    font-size:1rem;
+    font-size:0.9rem;
     color:var(--text-color);
     font-weight: bold;
     display:block;
@@ -523,8 +530,8 @@ footer{
 .ft-legal-list a{
     text-decoration:none;
     color: var(--color);
-    font-weight: 700;
-    font-size:1.02rem;
+    font-weight: 500;
+    font-size: 0.8rem;
 }
 .ft-legal-list a:hover {
     text-decoration:underline;
@@ -1134,11 +1141,21 @@ text-decoration:underline;
         /* border:1px solid purple; */
   
     }
-   
+    .footer-copyright{
+        border-left: 0;
+        border-right: 0; 
+        border-bottom: 0; 
+        border-radius: 0;
+    }
     .ft-legal-list span{
         width: 100%;
         /* border: 1px solid blue; */
         margin: 2%;
+    }
+    .ft-legal-list span a{
+        
+        /* font-weight: 500;
+        font-size: 0.8rem; */
     }
     
 }

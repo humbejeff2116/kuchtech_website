@@ -327,7 +327,7 @@
     }
     .about-college-qoute-container h1{
         width: 100%;
-        font-size: 1.7rem;
+        font-size: 1.5rem;
     }
 
     .about-college-qoute-button-wrapper{  
@@ -346,16 +346,36 @@
     .about-college-container{
        padding: 2%;
     }
-    .about-college-writeup p{
-        font-size: 1.1rem;
-        text-align: justify;
-        line-height: 1.5;
+    .about-college-writeup h2{
+        font-size: var(--480px-h2-font-size);
+        text-align: left;
     }
+    .about-college-writeup h3{
+        font-size: var(--480px-h3-font-size);
+        /* text-transform: lowercase; */
+    }
+    .about-college-writeup p{
+        font-size: var(--480px-p-font-size);
+        text-align: unset;
+        line-height: var(--480px-p-line-height);
+    }
+    .about-college-qoute-container h1::before,
+    .about-college-qoute-container h1::after {
+   
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 1.618;
+    font-size: 1.6em;
+    position: absolute;
+  }
     .about-college-qoute-button-container{
         bottom: 0%;
+        background-color: transparent;
     }
     .about-college-qoute-button-wrapper{  
-        width: 55%;
+        width: 60%;
+        background-color: transparent;
     }
     .about-college-mission-container{        
         padding: 2%;
@@ -364,10 +384,21 @@
         width: 100%;
         margin-bottom: 4%;
     }
+    .about-college-mission-child-header h2{
+        
+        font-size: var(--480px-h2-font-size);
+    }
+    .about-college-mission-child-body{
+        font-size: var(--480px-p-font-size);
+        /* text-align: unset; */
+        line-height: var(--480px-p-line-height);
+
+    }
     
 
     .about-college-qoute-button-wrapper button{ 
-        height: 50px;
+        height: 45px;
+        font-size: 0.95rem;
     }
     
 }

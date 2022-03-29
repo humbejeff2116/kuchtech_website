@@ -10,55 +10,73 @@ const FileDataWriter  = require('../lib/fileDataWriter');
 
 class IndexController {
 
-    index = async (req, res, next) => {
+    constructor() {
+        
+        this.index = this.index.bind(this);
+        this.about = this.about.bind(this);
+        this.getAdmission = this.getAdmission.bind(this);
+        this.getEntryRequirements = this.getEntryRequirements.bind(this);
+        this.getEApplication = this.getEApplication.bind(this);
+        this.getDepartments = this.getDepartments.bind(this);
+        this.contact = this.contact.bind(this);
+        this.blog = this.blog.bind(this);
+        this.getAllBlogPost = this.getAllBlogPost.bind(this);
+        this.search = this.search.bind(this);
+        this.searchCourses = this.searchCourses.bind(this);
+        this.getAllCourses = this.getAllCourses.bind(this);
+        this.errorSearch = this.errorSearch.bind(this);
+
+    }
+
+    async index(req, res, next) {
 
         res.render('index/home');
 
     }
 
-    about = (req, res, next) => {
+    about (req, res, next) {
 
         res.render('about/about');
 
     }
 
-    getAdmission = (req, res, next) => {
+    getAdmission(req, res, next) {
 
         res.render('admission/admission')
 
     }
 
-    getEntryRequirements = (req, res, next) => {
+    getEntryRequirements (req, res, next) {
 
         res.render('entry_requirements/entry_requirements')
 
     }
 
-    getEApplication = (req, res, next) => {
+    getEApplication (req, res, next)  {
 
         res.render('e-application/e-application')
 
     }
 
-    getDepartments = (req, res, next) => {
+    getDepartments (req, res, next) {
 
         res.render('departments/departments')
 
     }
 
-    contact = (req, res, next) => {
+    contact  (req, res, next)  {
 
         res.render('contact/contact');
 
     }
 
-    blog = (req, res, next) => {
+    blog (req, res, next)  {
 
         res.render('blog/blog');
         
     }
 
-    getAllBlogPost = async (req, res) => {
+    async getAllBlogPost(req, res)  {
 
         const blogsFilePath = path.join('src/data');
 
@@ -75,7 +93,7 @@ class IndexController {
         
     }
     
-    search = async (req, res) => {
+    async search (req, res) {
 
         const queryString = req.query.q;
 
@@ -86,7 +104,7 @@ class IndexController {
             switch (queryType) {
                 case 'search course' :
 
-                    this.searchCourses(queryString, res);
+                    this.searchCourses( res, queryString);
 
                     break;
 
@@ -115,7 +133,8 @@ class IndexController {
 
     }
 
-    searchCourses = async (query = "", res) => {
+    async searchCourses  (res, query = "") {
+
         try {
 
             const coursesFilePath = path.join('src/data');
@@ -138,7 +157,8 @@ class IndexController {
        
     }
 
-    getAllCourses = async (res) => {
+    async getAllCourses(res) {
+        
         try {
 
             const coursesFilePath = path.join('src/data');
@@ -159,7 +179,7 @@ class IndexController {
 
     }
 
-    errorSearch = async (res) => {
+    async errorSearch(res) {
 
         return res.status(400).json({ status: 400, message:`bad search query`, data: [] });
 
