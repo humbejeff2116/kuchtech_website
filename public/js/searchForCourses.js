@@ -92,17 +92,17 @@ async function searchCourses({ searchCourseQuery }) {
 
         } 
         // change search button text content
-        searchFormButton.textContent = 'Searching...'; 
+        searchFormButton.textContent = '...'; 
         // display searchResults UI 
         searchResultsContainer.style.display = 'flex';
         // create an anim effect with loader
         searchResults.innerHTML = generateLoaderTemp()
 
         // get courses 
-        const searchedCourses = await fetchCourses(searchCourseQuery);
+        const { status, data } = await fetchCourses(searchCourseQuery);
         
         // display results after 2000ms
-        if (!searchedCourses?.status === 200 || searchedCourses?.data.length < 1 ) {
+        if (status !== 200 || data.length < 1 ) {
            
             const notfoundTemplate = (
 
@@ -112,17 +112,23 @@ async function searchCourses({ searchCourseQuery }) {
 
             )
 
-            searchFormButton.textContent = 'Search';
+            searchFormButton.innerHTML = (
+
+                `<i class="fa fa-search" aria-hidden="true"></i>`
+
+            );
 
             searchResultsContainer.style.display = 'flex';
 
-            return searchResults.innerHTML = notfoundTemplate; 
+            searchResults.innerHTML = notfoundTemplate; 
+
+             return;
 
         }
 
         searchResults.innerHTML = ``
 
-        searchedCourses.data.forEach(course => {
+        data.forEach(course => {
 
             const  { id, title, courseDepartment, courseBrief, courseDetails } = course;
             
@@ -138,7 +144,11 @@ async function searchCourses({ searchCourseQuery }) {
            
         })
 
-        searchFormButton.textContent = 'Search';
+        searchFormButton.innerHTML = (
+
+            `<i class="fa fa-search" aria-hidden="true"></i>`
+
+        );
         // display search results component after attaching search results
         searchResultsContainer.style.display = 'flex';
 
@@ -187,7 +197,7 @@ function attachViewCourseDetailsEventListener() {
                 </div>
 
                 <div class="index-course-department">
-                    <i>tag</i>:<span> ${ courseDepartment } </span>
+                <i class="fa fa-tag" aria-hidden="true"></i> <span> ${ courseDepartment } </span>
                 </div>
 
                 <div class="index-course-details">

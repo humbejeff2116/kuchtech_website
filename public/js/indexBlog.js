@@ -87,8 +87,14 @@ function displayHighlight(blogPosts, indexBlogPostHighlitsContainer) {
                 <span>${ title }</span>
             </div>
             <div class="index-blog-post-tag">
-            <span>Date: ${ new Date(date).toDateString() }</span>
-            <span>Tag: ${ tag }</span>
+            <span>
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+             ${ new Date(date).toDateString() }
+             </span>
+            <span>
+            <i class="fa fa-tag" aria-hidden="true"></i> 
+            ${ tag }
+            </span>
             </div>
             </div>`
         )
@@ -235,10 +241,13 @@ function generateBlogWriteupTemplate({ id, title, imageSrc, date, tag, details }
         <div class="index-blog-post-writeup-tags">
 
             <div>
-            <i>date:</i> <span>${ new Date(date).toDateString() }</span>
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+ 
+            <span>${ new Date(date).toDateString() }</span>
             </div>
             <div>
-                <i>tag:</i> <span>${ tag }</span>
+            <i class="fa fa-tag " aria-hidden="true"></i> 
+             <span>${ tag }</span>
             </div>
 
         </div>

@@ -173,6 +173,7 @@ header{
     justify-content: space-around;
     align-items: flex-end;
     /* border:2px solid blue; */
+    margin-right: 3%;
     /* min-width: 35%; */
 
 }

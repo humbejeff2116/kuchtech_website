@@ -241,7 +241,8 @@
     transition: all 0.3s ease;
     outline: none;
     color: var(--text-color);
-    caret-color: var(--prim-color)
+    caret-color: var(--prim-color);
+    padding-left: 1%;
 }
 .index-courses-search-bar form input[type="text"]:hover {
    
@@ -344,14 +345,19 @@
     font-size: 0.8rem;
     border-radius: 4px;
     width: 10%;
-    color: var(--prim-color);
-    background-color: #cccccc;
+    color: #a5a5a5;
     background-color: var(--background-color);
     transition: all 0.2s ease;
     outline: none;
 }
+.index-courses-search-bar form button i {
+   
+   
+    font-size: 1.3rem;
+    
+}
 .index-courses-search-bar form button:hover {
-    box-shadow:0 0 2px var(--box-shadow-color);
+    box-shadow: 1px 1px 3px var(--box-shadow-color);
     cursor: pointer;
     /* scale: 1.02; */
 
@@ -421,12 +427,14 @@
 .index-course-department{
     /* border: 1px solid black; */
     color: var(--prim-color);
+    color: #a5a5a5;
    
 
 }
 
 .index-course-department span{
     font-size: 0.8rem;
+    
     
 }
 .index-course-details{
@@ -483,12 +491,13 @@
     font-weight: 600;
     font-size: 0.9rem;
     border: 1px solid var(--prim-border-color);
-    /* box-shadow:  0 0 1px var(--box-shadow-color); */
+    transition: all 0.2s ease;
 }
 
 .index-course-button-wrapper button:hover{
   
    cursor: pointer;
+    box-shadow:  1px 1px 3px var(--box-shadow-color);
 }
 .index-view-more-course-button-container{
     display: flex;
@@ -513,12 +522,12 @@
     color: var(--prim-color);
     font-weight: 600;
     font-size: 0.9rem;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 
 }
 .index-view-more-course-button-wrapper button:hover{
    cursor: pointer;
-   box-shadow: 0 0 3px var(--box-shadow-color);
+   box-shadow: 1px 1px 3px var(--box-shadow-color);
 }
 .view-more-courses{
     display: block;
@@ -819,7 +828,7 @@
 .index-blog-post-tag span{
     color: var(--text-color);
     font-size:0.8rem;
-    color: var(--prim-color);
+    color: #a5a5a5;
     margin-right: 2%;
 }
 .index-blog-post-image{
@@ -836,7 +845,7 @@
 .index-blog-post-title{
     /* border: 1px solid purple; */
     /* padding: 1%; */
-    font-weight: 600;
+    font-weight: 500;
     color: var(--text-color);
     margin-bottom: 3%;
 }
@@ -953,12 +962,7 @@
     /* border: 1px solid red; */
     font-size:0.8rem;
     margin-right: 5%;
-    color: var(--prim-color);
-    font-style: italic;
-    /* min-width: 20%; */
-   
-    
-
+    color: #a5a5a5; 
 }
 
 .index-blog-post-read-more{
@@ -1346,8 +1350,8 @@
         height: 2.5rem;
         margin-right: 0; 
         /* border-right: 0; */
-        padding-right: 19%;
-        padding-left: 2%;
+        padding-right: 15%;
+        padding-left: 3%;
     }
     .index-courses-search-bar form button {
         height: 2.5rem; 
@@ -1426,6 +1430,9 @@
         text-align: unset;
         line-height: var(--480px-p-line-height);
     }
+    .index-blog-component-header h2{
+        font-size: var(--480px-h2-font-size);
+    }
     .index-blog-content{
        
         flex-direction: column;
@@ -1437,6 +1444,13 @@
     .index-blog-post-title{
       
         font-weight: normal;
+        font-size: var(--480px-p-font-size);
+       
+    }
+    .index-blog-post-writeup-tags > div{
+       
+        font-size:0.75rem;
+        /* border: 1px solid black; */
        
     }
     .index-blog-post-writeup-container{
@@ -1456,7 +1470,10 @@
         background-color: var(--background-color);
         padding: 2%;
     }
-
+    .index-blog-post-tag span{
+       
+        font-size:0.75rem;
+    }
     .index-blog-post-writeup p{
         font-size: var(--480px-p-font-size);
         text-align: unset;

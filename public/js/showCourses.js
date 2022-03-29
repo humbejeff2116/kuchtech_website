@@ -165,7 +165,7 @@ function attachViewCourseDetailsEventListener() {
                 </div>
 
                 <div class="index-course-department">
-                    <i>tag</i>:<span> ${ courseDepartment } </span>
+                <i class="fa fa-tag" aria-hidden="true"></i> <span> ${ courseDepartment } </span>
                 </div>
 
                 <div class="index-course-details">
@@ -239,7 +239,7 @@ function setCourseTemplate({ id, title, courseDepartment, courseBrief, courseDet
         </div>
 
         <div class="index-course-department">
-            <i>tag</i>:<span> ${ courseDepartment } </span>
+        <i class="fa fa-tag" aria-hidden="true"></i> <span> ${ courseDepartment } </span>
         </div>
 
         <div class="index-course-details">
