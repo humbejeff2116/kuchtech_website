@@ -232,7 +232,7 @@ function generateBlogWriteupTemplate({ id, title, imageSrc, date, tag, details }
 
         ` <div class="index-blog-post-writeup-wrapper">
         <div class="index-blog-post-writeup-image-container">
-            <img src = ${ imageSrc } alt = "provost img" />
+            <img src = ${ imageSrc } alt = "blog post picture" />
         </div>
 
         <div class="index-blog-post-writeup-title">
