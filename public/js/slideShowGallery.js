@@ -51,7 +51,7 @@ function showSlides(n) {
 
     const dots = document.querySelectorAll('.demo');
 
-    const captionText = document.querySelector('.caption');
+    const captionText = document.querySelector('#caption');
 
     if (n > slides.length) {
 
