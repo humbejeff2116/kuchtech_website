@@ -1,29 +1,22 @@
 
-
-
-
 .about-college-container{
     /* border: 2px solid red; */
     min-height: 90vh;
     padding: 1%;
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     background-color:var(--background-color);
 }
-.about-college-writeup{
-    /* border-top: 2px solid var(--prim-border-color);
-    border-bottom: 2px solid var(--prim-border-color);
-    border-right: 2px solid var(--prim-border-color); */
 
+.about-college-writeup{
     border: 1px solid var(--prim-border-color);
-    /* box-shadow: 0 0 2px var(--box-shadow-color); */
     border-radius: 4px;
     min-height: 60vh;
     width: 100%;
     color: var(--text-color);
     padding: 3%;
 }
+
 .about-college-writeup h2{
    font-size: 1.6rem;
    text-align: center;
@@ -34,13 +27,10 @@
     text-align: justify;
     line-height: 1.8;
 }
+
 .about-college-writeup blockquote{
     font-size: 1.2rem;
-   
-    /* text-align: justify; */
 }
-
-
 
 .about-college-mission-container{
     /* border: 2px solid red; */
@@ -51,13 +41,12 @@
     padding: 1%;
     background-color:var(--background-color);
     flex-wrap: wrap;
-    /* background-color: #cccccc; */
 }
+
 .about-college-mission-child{
     width: 22%;
     border: 1px solid var(--prim-border-color);
     background-color:var(--background-color);
-    /* box-shadow: 1px 1px 2px #6d6d6d; */
     border-radius: 4px;
     padding: 1%;
     color: var(--text-color);
@@ -65,83 +54,60 @@
     flex-direction: column;
     justify-content: center;
 }
+
 .about-college-mission-child-icon-contr{
     /* border: 1px solid red; */
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
+
 .about-college-mission-child-icon{
     /* border: 1px solid blue; */
     width: 80px;
-    height: 80px;
-    border-radius: 50%;
+    height: 90px;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: #cccccc; */
-
 }
+
+.about-college-mission-child-icon img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 .about-college-mission-child-icon.mission{
-    
-    /* background-color: var(--olive-green); */
-   
-    color: var(--olive-green);
-    border: 1px solid var(--prim-border-color);
-
+    width: 80px;
 }
+
 .about-college-mission-child-icon.vision{
     
-    /* background-color: red; */
-    /* background-color: #cccccc; */
-    color: rgb(255, 80, 80);
-    border: 1px solid var(--prim-border-color);
-   
-    
 }
-.about-college-mission-child-icon.goals{
-    
-    /* background-color: yellow; */
-    color: yellow;
-    border: 1px solid var(--prim-border-color);
+.about-college-mission-child-icon.values{
+    width: 80px;
+    /* border: 1px solid var(--prim-border-color); */
+}
 
-}
-.about-college-mission-child-icon i{
-    /* border: 1px solid blue; */
-    /* width: 2200px;
-    height: 2200px; */
-    font-size: 1.2rem;
-    font-weight: bold;
-
-}
 .about-college-mission-child-header{
- text-align: center;
- 
+    text-align: center;
 }
-.about-college-mission-child-header h2{
-   text-decoration: underline;
-   text-decoration-thickness: 2px;
-   text-underline-offset: 6px;
-   /* font-size: 1.5rem; */
-}
-.about-college-mission-child-header.vision h2{
-    text-decoration-color: rgb(255, 80, 80);
-}
-.about-college-mission-child-header.mission h2{
-    text-decoration-color: var(--olive-green);
-}
-.about-college-mission-child-header.goals h2{
-    text-decoration-color: yellow;
-}
+
+/* .about-college-mission-child-header h2{
+
+} */
+
 .about-college-mission-child-body{
  font-size: 1.2rem;
  text-align: center;
  line-height: 1.6;
 }
 
-/* block qoute */
+.about-college-mission-child-body ul li{
+    list-style-type: none;
+}
 
+/* block qoute */
 .about-college-qoute-container{
     /* border: 2px solid red; */
     display: flex;
@@ -153,7 +119,6 @@
     position: relative;
     background-color:var(--background-color);
 }
-
 
 .about-college-qoute-container h1{
     font-style: italic;
@@ -167,9 +132,9 @@
     color: var(--text-color);
     font-weight: 600;
     font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Oxygen','Ubuntu',
-     'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-      color: var(--text-color);
-      position: relative;
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    color: var(--text-color);
+    position: relative;
 }
 
 .about-college-qoute-container h1::before {
@@ -183,8 +148,7 @@
    content: close-quote;
     /* Place it at thee bottom-right */
     bottom: 2%;
-    right: 2%;
-   
+    right: 2%; 
   }
 
   .about-college-qoute-container h1::before,
@@ -200,7 +164,6 @@
   position: absolute;
 }
 
-
 .about-college-qoute-button-container{
     /* border: 1px solid green; */
     display: flex;
@@ -211,38 +174,29 @@
     bottom: 2%;
 
 }
+
 .about-college-qoute-button-wrapper{
-    /* border: 2px solid var(--prim-border-color);
-    border-radius: 4px; */
+    /* border: 2px solid var(--prim-border-color)*/
     background-color: var(--no-color);
     width: 15%;
-    /* padding: 1%; */
-
 }
 .about-college-qoute-button-wrapper button{
-   
     width: 100%;
     height: 58px;
     border: none;
     outline: none;
-    /* border: none; */
     border-radius: 30px;
     background-color: var(--olive-green);
-    /* background-color: var(--no-color); */
-    
     color: var(--olive-green);
     color: var(--no-color);
     font-size: 1.2rem;
     font-weight: 600;
-
 }
+
 .about-college-qoute-button-wrapper button:hover{
-   
    cursor: pointer;
    box-shadow: 0 0 1px var(--box-shadow-color);
-
 }
-
 
 .about-college-contact-container{
     /* border: 2px solid red; */
@@ -251,15 +205,13 @@
     justify-content: space-between;
     min-height: 50vh;
     padding: 1%;
-    /* background-color:#afafaf; */
 }
+
 .about-college-contact-child{
     width: 22%;
     /* border: 1px solid #707070; */
-    /* box-shadow: 1px 1px 2px #6d6d6d; */
     border: 1px solid var(--prim-border-color);
     border-radius: 4px;
-    /* padding: 1%; */
     color: var(--text-color);
     display: flex;
     flex-direction: column;
@@ -268,12 +220,11 @@
     background-color: var(--no-color);
     background-color:var(--background-color);
 }
+
 .about-college-contact-child.school-map{
     width: 75%;
-
     border: 1px solid var(--prim-border-color);
     border-radius: 4px;
-    /* padding: 1%; */
     color: var(--text-color);
     display: flex;
     flex-direction: column;
@@ -282,13 +233,12 @@
     background-color: var(--no-color);
     background-color:var(--background-color);
 }
+
 /* map */
 #map { 
     height: 500px; 
     z-index: 0;
     /* border: 1px solid red; */
-    /* width: 600px; */
-    /* background-color: grey; */
 }
 
 /* .about-college-gallery-container{
@@ -296,14 +246,12 @@
     min-height: 90vh;   
 } */
 
-
-
-
 @media only screen and (max-width: 1024px) {
 
     .about-college-writeup h2{
         font-size: 1.5rem;
     }
+    
     .about-college-qoute-container h1{
         width: 80%;
     }
@@ -311,6 +259,7 @@
     .about-college-qoute-button-wrapper{  
         width: 19%;
     }
+
     .about-college-mission-child{
         width: 28%;
     }
@@ -320,11 +269,13 @@
     }
     
 }
+
 @media only screen and (max-width: 600px) {
 
     .about-college-writeup h2{
         font-size: 1.5rem;
     }
+
     .about-college-qoute-container h1{
         width: 100%;
         font-size: 1.5rem;
@@ -333,6 +284,7 @@
     .about-college-qoute-button-wrapper{  
         width: 35%;
     }
+
     .about-college-mission-child{
         width: 28%;
     }
@@ -342,60 +294,67 @@
     }
     
 }
+
 @media only screen and (max-width: 480px) {
+
     .about-college-container{
        padding: 2%;
     }
+
     .about-college-writeup h2{
         font-size: var(--480px-h2-font-size);
         text-align: left;
     }
+
     .about-college-writeup h3{
         font-size: var(--480px-h3-font-size);
-        /* text-transform: lowercase; */
     }
+
     .about-college-writeup p{
         font-size: var(--480px-p-font-size);
         text-align: unset;
         line-height: var(--480px-p-line-height);
     }
+
     .about-college-qoute-container h1::before,
     .about-college-qoute-container h1::after {
-   
-    display: block;
-    width: 40px;
-    height: 40px;
-    line-height: 1.618;
-    font-size: 1.6em;
-    position: absolute;
-  }
+        display: block;
+        width: 40px;
+        height: 40px;
+        line-height: 1.618;
+        font-size: 1.6em;
+        position: absolute;
+    }
+
     .about-college-qoute-button-container{
         bottom: 0%;
         background-color: transparent;
     }
+
     .about-college-qoute-button-wrapper{  
         width: 60%;
         background-color: transparent;
     }
+
     .about-college-mission-container{        
         padding: 2%;
     }
+
     .about-college-mission-child{
         width: 100%;
         margin-bottom: 4%;
     }
+
     .about-college-mission-child-header h2{
         
         font-size: var(--480px-h2-font-size);
     }
+
     .about-college-mission-child-body{
         font-size: var(--480px-p-font-size);
-        /* text-align: unset; */
         line-height: var(--480px-p-line-height);
-
     }
     
-
     .about-college-qoute-button-wrapper button{ 
         height: 45px;
         font-size: 0.95rem;
