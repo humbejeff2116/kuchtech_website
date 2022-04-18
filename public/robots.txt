@@ -1,0 +1,10 @@
+
+
+
+
+
+Sitemap: https://kuchtech.herokuapp.com/sitemap.xml
+
+User-agent: *
+
+Disallow:
