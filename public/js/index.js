@@ -32,7 +32,7 @@ function attachSlideOutAdvertContainerEvent(advertContainer, advertCloseButton) 
 
     advertCloseButton.addEventListener('click', function(e) {
 
-        advertContainer.style.top = '-180px';
+        advertContainer.style.top = '-450px';
 
     })
 
