@@ -1,7 +1,4 @@
 
-
-
-
 <!DOCTYPE html>
 <html lang="eng">
     <head>
@@ -77,7 +74,7 @@ crossorigin="anonymous"
                                     <div class="nav-item" >                               
                                         <a class="<% title = 'login' ? 'active' : ''  %> " href="/">
                                             <span>
-                                               Home
+                                               HOME
                                             </span>
                                         </a> 
                                     </div>
@@ -86,24 +83,45 @@ crossorigin="anonymous"
                                     <div class="nav-item" >                               
                                         <a class="<% title = 'login' ? 'active' : ''  %> " href="/about">
                                             <span>
-                                               About
+                                               ABOUT
                                             </span>
                                         </a> 
                                     </div>
                                     <!-- Admissions -->
     
-                                    <div class="nav-item" >                               
-                                        <a class="<% title = 'login' ? 'active' : ''  %> " href="/services">
+                                    <div class="nav-item dropdown" > 
+                                        
+                                        <a class="<% title = 'login' ? 'active' : ''  %> " href='#' onclick="event.preventDefault()">
                                             <span>
-                                              Admissions
+                                              ADMISSION
                                             </span>
                                         </a> 
+                                        <div class="nav-item-dropdown">
+                                            <a class="<% title = 'login' ? 'active' : ''  %> " href="/entry-requirements">
+                                                <span>
+                                                  ENTRY REQUIREMENTS
+                                                </span>
+                                            </a> 
+                                            <a class="<% title = 'login' ? 'active' : ''  %> " href="/admissions">
+                                                <span>
+                                                  ADMISSION
+                                                </span>
+                                            </a> 
+                                            <a class="<% title = 'login' ? 'active' : ''  %> " href="/e-application">
+                                                <span>
+                                                 E-APPLICATION
+                                                </span>
+                                            </a> 
+
+                                        </div>
                                     </div>
+
                                     <!-- departments -->
                                     <div class="nav-item" >                               
-                                        <a class="<% title = 'login' ? 'active' : ''  %> " href="/services">
+                                        <!-- <a class="<% title = 'login' ? 'active' : ''  %> " href="/departments"> -->
+                                            <a class="<% title = 'registration' ? 'active' : ''  %> "  href="#">
                                             <span>
-                                              Departments
+                                              DEPARTMENTS
                                             </span>
                                         </a> 
                                     </div>
@@ -112,16 +130,17 @@ crossorigin="anonymous"
                                     <div class="nav-item" >                               
                                         <a class="<% title = 'login' ? 'active' : ''  %> " href="/contact">
                                             <span>
-                                               Contact
+                                               CONTACT
                                             </span>
                                         </a> 
                                     </div>
     
                                     <!-- blog -->
                                     <div class="nav-item" >                               
-                                        <a class="<% title = 'login' ? 'active' : ''  %> " href="/blog">
+                                        <!-- <a class="<% title = 'login' ? 'active' : ''  %> " href="/blog"> -->
+                                            <a class="<% title = 'registration' ? 'active' : ''  %> "  href="#">
                                             <span>
-                                             Blog
+                                             BLOG
                                             </span>
                                         </a> 
                                     </div>
@@ -131,35 +150,24 @@ crossorigin="anonymous"
 
                                 <div class="nav-2">
                                     <div  class="nav-item">                               
-                                        <a  href="/">
-                                            <span>
-                                         course Registration
-                                            </span>
-                                        </a> 
-                                    </div>
-                                    <div  class="nav-item">                               
                                         <a  href="/users/">
-                                            <span>
-                                          Dashboard
-                                            </span>
+                                        <span>
+                                        Dashboard
+                                        </span>
                                         </a> 
                                     </div>
-
-                                <div  class="nav-item" >                               
-                                    <a class="<% title = 'members' ? 'active' : ''  %> " href="/users/edit" >
-                                        <span>
-                                            hello  <%= currentUser.displayName() %>
-                                        </span>
-                                    </a> 
-                                </div>
-
-
                                 <div  class="nav-item">                               
                                     <a  href="/users/logout">
                                         <span>
                                         logout
                                         </span>
                                     </a> 
+                                </div>
+                            </div>
+
+                            <div class="nav-3">
+                                <div class="nav-item" >                               
+                                    <span class="mobile-nav" onclick="openNav()">&#9776</span>
                                 </div>
                             </div>
                            
@@ -246,10 +254,10 @@ crossorigin="anonymous"
 
 
                                 <div class="nav-2">
-                                    <!-- cousre registration -->
+                                    <!-- Student portal -->
                                     <div class="nav-item" >                               
-                                        <!-- <a class="<% title = 'registration' ? 'active' : ''  %> "  href="/students/portal"> -->
-                                            <a class="<% title = 'registration' ? 'active' : ''  %> "  href="#">
+                                        <a class="<% title = 'registration' ? 'active' : ''  %> "  href="/students/portal">
+                                            <!-- <a class="<% title = 'registration' ? 'active' : ''  %> "  href="#"> -->
                                             <span>
                                                STUDENT PORTAL
                                             </span>
@@ -330,68 +338,69 @@ crossorigin="anonymous"
         </div>
         
 
-
         <div class="progress"></div>
         <div class="container">
-            
-       
-
-        <div class="err-container" >
-         <%  if (errors.length > 0) { %>
-            <% errors.forEach(err =>{ %>
-                <div class="alert alert-danger" role ="alert">
-                    <%= err %>
-                </div>
-           <% }) %>
-
-
-
-         <%}%>
-              
-
-               <% if (valErrors.length>0) {%>
-
-                <% valErrors.forEach(err => { %>
+            <div class="err-container" >
+            <%  if (errors.length > 0) { %>
+                <% errors.forEach(err =>{ %>
                     <div class="alert alert-danger" role ="alert">
-                            <%= err.msg %>
+                        <%= err %>
                     </div>
-                    <%}) %>
+            <% }) %>
+
 
 
             <%}%>
-
-           
-              
-          
-           <% infos.forEach(info=>{ %>
-                <div id="info" class="alert alert-info" role="alert">
-                    <%= info %>
-                </div>
-
-
                 
-          <%  }) %>
-        </div>
+
+                <% if (valErrors.length>0) {%>
+
+                    <% valErrors.forEach(err => { %>
+                        <div class="alert alert-danger" role ="alert">
+                                <%= err.msg %>
+                        </div>
+                        <%}) %>
+
+
+                <%}%>
+
+            
+                
+            
+            <% infos.forEach(info=>{ %>
+                    <div id="info" class="alert alert-info" role="alert">
+                        <%= info %>
+                    </div>
+
+
+                    
+            <%  }) %>
+            </div>
 
         <script>
 
         function openNav() {
 
-            document.getElementById('mysidenav').style.width="100%";
+            document.getElementById('mysidenav').style.width = "100%";
+
             setTimeout(()=>{
-                document.querySelector('.sidenav').style.opacity="1";
+
+                document.querySelector('.sidenav').style.opacity = "1";
+
             }, 500)
            
-            /* included for off canvas if it is only overlay you dont
-            include this style*/
+            /* include script below for off canvas */
             // document.getElementsByClassName('container')[0].style.marginLeft='250px'
             // document.body.style.backgroundColor="rgba(0,0,0,0.4)";
 
         }
 
-        function closeNav(){
-            document.querySelector('.sidenav').style.opacity="0";
-            document.getElementById('mysidenav').style.width="0";
+        function closeNav() {
+
+            document.querySelector('.sidenav').style.opacity = "0";
+
+            document.getElementById('mysidenav').style.width = "0";
+
             // document.getElementsByClassName('container')[0].style.marginLeft='0'
             // document.body.style.backgroundColor="white";
 
