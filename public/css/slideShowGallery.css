@@ -92,8 +92,6 @@
     justify-content: space-between;
     flex-wrap: nowrap;
     overflow-x: auto;
-    /* height: 20vh; */
-    /* padding: 0.5% 0; */
     -webkit-overflow-scrolling: touch;
   }
 
@@ -121,6 +119,21 @@
 
 
   @media screen and (max-width: 480px) {
+
+    .row{
+      -webkit-overflow-scrolling: touch;
+    }
+  
+    /* Six columns side by side */
+    .column {
+      width:25%;
+    }
+
+    .prev,
+    .next { 
+      padding: 8px;
+      font-size: 15px;
+    }
 
     .about-college-gallery-heading h2{
       font-size: var(--480px-h2-font-size);
