@@ -976,6 +976,13 @@ footer{
         /* border: 1px solid blue; */
         margin: 2%;
     }
+    /* .error-404-container{
+
+    } */
+    .error-404-wrapper{
+        width: 95%;
+        min-height: 60vh;
+    }
   
 }
 
