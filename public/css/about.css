@@ -64,8 +64,8 @@
 
 .about-college-mission-child-icon{
     /* border: 1px solid blue; */
-    width: 80px;
-    height: 90px;
+    width: 70px;
+    height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,7 +77,7 @@
     object-fit: contain;
 }
 
-.about-college-mission-child-icon.mission{
+/* .about-college-mission-child-icon.mission{
     width: 80px;
 }
 
@@ -86,8 +86,8 @@
 }
 .about-college-mission-child-icon.values{
     width: 80px;
-    /* border: 1px solid var(--prim-border-color); */
-}
+  
+} */
 
 .about-college-mission-child-header{
     text-align: center;
@@ -251,7 +251,7 @@
     .about-college-writeup h2{
         font-size: 1.5rem;
     }
-    
+
     .about-college-qoute-container h1{
         width: 80%;
     }
