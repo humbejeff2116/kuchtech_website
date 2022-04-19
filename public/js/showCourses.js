@@ -32,10 +32,12 @@ async function viewAllCourses() {
         const chachedCourses = sessionStorage.getItem('courses') ? JSON.parse(sessionStorage.getItem('courses')) : null;
 
         let allCourses;
+        
+        viewMoreCoursesButton.style.display = "none";
+        
+        indexCoursesContainer.innerHTML = loader;
 
         if (!chachedCourses) {
-
-            indexCoursesContainer.innerHTML = loader;
            
            allCourses = await getAllCourses();
           
@@ -47,7 +49,7 @@ async function viewAllCourses() {
 
         }
         
-        showMinimalCourses(allCourses.data, indexCoursesContainer);
+        showMinimalCourses(allCourses.data, indexCoursesContainer, viewMoreCoursesButton);
 
         showMoreCourses(viewMoreCoursesButton, viewLessCoursesButton, allCourses.data, indexCoursesContainer);
 
@@ -60,7 +62,7 @@ async function viewAllCourses() {
 
 }
 
-function showMinimalCourses(allCourses, indexCoursesContainer) {
+function showMinimalCourses(allCourses, indexCoursesContainer, viewMoreCoursesButton) {
     
     indexCoursesContainer.innerHTML = ``;
 
@@ -71,6 +73,8 @@ function showMinimalCourses(allCourses, indexCoursesContainer) {
         indexCoursesContainer.innerHTML += indexCourseTemplate;
 
     })
+
+    viewMoreCoursesButton.style.display = "block"
 
     attachViewCourseDetailsEventListener();
 }
