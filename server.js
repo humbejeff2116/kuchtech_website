@@ -127,11 +127,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(indexRoute);
 
-app.use('/users', express.static(__dirname, +'/public'));
+app.use('/students', express.static(path.join(__dirname, 'public')));
 
 app.use('/users' ,usersRoute);
-
-// app.use(notFoundAndErrorRoutes);
 
 app.use((req, res) => {
 
