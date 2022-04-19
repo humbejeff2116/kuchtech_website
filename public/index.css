@@ -2,7 +2,7 @@
 .index-advert-container{
     border-bottom: 1px solid var(--prim-border-color);
     position: fixed;
-    top: -180px;
+    top: -450px;
     padding: 1% 2%;
     width: 100%;
     z-index: 1;
@@ -11,6 +11,7 @@
     transition:top 1s;
   -webkit-transition:top 1s;
     font-style: oblique;
+     line-height: 1.6;
 }
 
 .index-advert-wrapper{
@@ -30,8 +31,8 @@
 }
 
 .advert-close{
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -1102,6 +1103,10 @@
 
 @media only screen and (max-width: 600px) {
 
+    .index-advert-container{
+        padding-bottom: 3%;   
+    }
+
     .modal-container{
         width:80%; 
     }
@@ -1176,7 +1181,7 @@
         left: 0;
         width:100%;
         height: 100vh;
-        z-index:1;
+        z-index:5;
         overflow-y:auto;
         display: none;
         flex-direction: column;
@@ -1195,6 +1200,12 @@
 }
 
 @media only screen and (max-width: 480px) {
+
+    .index-advert-container{
+        padding-bottom: 5% ;
+        line-height: var(--480px-p-line-height);
+        
+    }
 
     .advert-close{
     border: 2px solid var(--prim-border-color);
@@ -1312,6 +1323,19 @@
         font-size: var(--480px-p-font-size);
         line-height: var(--480px-p-line-height);
     }
+    .index-course-details ul li{
+        font-size: var(--480px-p-font-size);
+        line-height: var(--480px-p-line-height);
+    }
+
+    .index-course-button-wrapper.view-course{
+        /* border: 1px solid black; */
+        width: 100%;
+    }
+    
+    /* .index-course-button-wrapper.view-course button{
+        
+    } */
 
     .index-view-more-course-button-wrapper{
         width: 70%;
@@ -1377,23 +1401,7 @@
         /* border: 1px solid black; */
        
     }
-    .index-blog-post-writeup-container{
-        width: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width:100%;
-        height: 100vh;
-        /* background: rgba(0, 0, 0, 0.5); */
-        z-index:1;
-        overflow-y:auto;
-        display: none;
-        flex-direction: column;
-        border: none;
-        box-shadow: none;
-        background-color: var(--background-color);
-        padding: 2%;
-    }
+    
     .index-blog-post-tag span{
        
         font-size:0.75rem;
@@ -1413,7 +1421,9 @@
 @media only screen and (max-width: 320px) {
 
     .advert-close{
+        width: 35px;
+        height: 35px;
         border: 2px solid var(--prim-border-color);
-        margin-top: 4%;
+        margin-top: 5%;
     }
 }
