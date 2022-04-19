@@ -57,9 +57,9 @@
   
 }
 @media only screen and (max-width: 600px) {
+
     .admission-container{
         padding: 2%;
-        min-height: 50vh;   
     }
     .admission-wrapper{
         border:1px solid var(--prim-border-color);
@@ -67,13 +67,11 @@
         width: 100%;
         padding: 4%;
         border-radius: 4px;
-    
-    }
-    
-    
+    }   
 }
 
 @media only screen and (max-width: 480px) {
+    
     .admission-heading h2{
         font-size: var(--480px-h2-font-size);
 
@@ -82,6 +80,11 @@
     .admission-writeup p{
         font-size: var(--480px-p-font-size);
         text-align: unset;
+        line-height: var(--480px-p-line-height);
+    }
+
+    .admission-writeup ul li{
+        font-size: var(--480px-p-font-size);
         line-height: var(--480px-p-line-height);
     }
 }
