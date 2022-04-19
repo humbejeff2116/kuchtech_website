@@ -1,50 +1,60 @@
 
-
-
 .admission-container{
     /* border: 1px solid red; */
     padding: 1%;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
     min-height: 88vh;
-
 }
+
+.admission-container.align-center{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admission-container.align-center.custom-height{
+    min-height: 75vh;
+}
+
 .admission-wrapper{
     border:1px solid var(--prim-border-color);
     /* box-shadow: 1px 1px 2px #6d6d6d; */
     width: 70%;
     padding: 3%;
     border-radius: 4px;
-
 }
+
 .admission-heading{
     color: var(--text-color);
-
 }
 
 .admission-writeup{
     color: var(--text-color);
-
 }
+
 .admission-writeup p{
     font-size: 1.25rem;
-    text-align: justify;
+}
+
+.admission-writeup ul li{
+    font-size: 1.25rem;
+}
+
+.e-application-form-price{
+    color: var(--prim-color);
 }
 
 .admission-writeup p a{
    color: var(--prim-color);
    text-decoration: none;
 }
+
 .admission-writeup p a:hover{
    text-decoration: underline;
 }
 
-
 @media only screen and (max-width: 1024px) {
-
-    
-    
+  
 }
 @media only screen and (max-width: 600px) {
     .admission-container{
@@ -62,6 +72,7 @@
     
     
 }
+
 @media only screen and (max-width: 480px) {
     .admission-heading h2{
         font-size: var(--480px-h2-font-size);
