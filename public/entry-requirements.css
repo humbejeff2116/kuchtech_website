@@ -2,6 +2,7 @@
     /* border:2px solid var(--prim-border-color);*/
     min-height: 40vh;
     overflow-x: auto;
+    padding: 1%;
 }
 
 .requirements-table{
